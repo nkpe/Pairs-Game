@@ -1,0 +1,22 @@
+header{
+    background-color: rgb(201, 235, 248);
+    height: 50px;
+}
+
+header nav{
+    position: relative;
+    float: left;
+}
+
+.nav-link{
+    color: rgb(34, 34, 34);
+}
+
+main #game-pg{
+    
+}
+
+footer{
+    height: 100px;
+    background-color: blue;
+}
