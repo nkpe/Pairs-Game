@@ -73,7 +73,8 @@ The code can be run locally by downloading from my GitHub repository following t
 # Credits
 
 ## Content
-https://www.w3schools.com/bootstrap4/bootstrap_cards.asp
+
+https://getbootstrap.com/docs/5.0/components/card/ - implementing card layout on game page
 
 ## Media
 ## Acknowledgements 

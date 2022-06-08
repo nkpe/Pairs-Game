@@ -10,11 +10,11 @@ body header {
     height: 100vh
 }
 
-#how-to{
+main{
     height: 100vh;
 }
 
-.cocktail-card-back{
+/* .cocktail-card-back{
     height: 100%;
     width: auto;
 }
@@ -25,4 +25,5 @@ body header {
 
 .card-col , .card , .card-body{
     height: 100%;
-}
+} */
+
