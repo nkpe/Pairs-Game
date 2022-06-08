@@ -1,0 +1,28 @@
+body header {
+    height: 100px;
+}
+
+.bi {
+    font-size: 40px;
+} 
+
+#home-page{
+    height: 100vh
+}
+
+#how-to{
+    height: 100vh;
+}
+
+.cocktail-card-back{
+    height: 100%;
+    width: auto;
+}
+
+.card-row {
+    height: 100px;
+}
+
+.card-col , .card , .card-body{
+    height: 100%;
+}
