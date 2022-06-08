@@ -4,15 +4,29 @@ body header {
 
 .bi {
     font-size: 40px;
-} 
+}
 
-#home-page{
+#home-page {
     height: 100vh
 }
 
-main{
+main, .container {
     height: 100vh;
 }
+
+.row-cols-lg-4>* {
+    flex: 0 0 auto;
+    width: 25%;
+    padding-bottom: 25%;
+    height: 0;
+    position: relative;
+}
+
+/* .card {
+    height: 100%;
+} */
+
+
 
 /* .cocktail-card-back{
     height: 100%;
@@ -26,4 +40,3 @@ main{
 .card-col , .card , .card-body{
     height: 100%;
 } */
-

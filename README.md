@@ -76,6 +76,8 @@ The code can be run locally by downloading from my GitHub repository following t
 
 https://getbootstrap.com/docs/5.0/components/card/ - implementing card layout on game page
 
+
+http://alistapart.com/article/creating-intrinsic-ratios-for-video/ - Sizing ratio for the cards on game page.
 ## Media
 ## Acknowledgements 
 * 
