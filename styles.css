@@ -2,25 +2,46 @@ body header {
     height: 100px;
 }
 
+.pina-colour1 {
+    background-color: rgb(169, 218, 218);
+}
+
 .bi {
     font-size: 40px;
 }
 
 #home-page {
-    height: 100vh
+    min-height: 100vh
 }
 
 main, .container {
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.row-cols-lg-4>* {
-    flex: 0 0 auto;
-    width: 25%;
-    padding-bottom: 25%;
+.row {
+    align-content: center;
+}
+
+.row-cols-2>* {
+    padding-bottom: 50%;
     height: 0;
     position: relative;
 }
+
+footer {
+    height: 200px;
+    width: 100%;
+    bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .row-cols-lg-4>* {
+        padding-bottom: 25%;
+        height: 0;
+        position: relative;
+    }
+}
+
 
 /* .card {
     height: 100%;

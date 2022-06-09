@@ -79,5 +79,8 @@ https://getbootstrap.com/docs/5.0/components/card/ - implementing card layout on
 
 http://alistapart.com/article/creating-intrinsic-ratios-for-video/ - Sizing ratio for the cards on game page.
 ## Media
+## Styling
+https://www.color-hex.com/color-palette/4248
+
 ## Acknowledgements 
 * 
