@@ -3,8 +3,12 @@ body header {
 }
 
 .pina-colour1 {
-    background-color: rgb(169, 218, 218);
+    background-color: #f7325e;
 }
+
+/* body * {
+    color: #fef8cf;
+} */
 
 .bi {
     font-size: 40px;
@@ -18,14 +22,22 @@ main, .container {
     min-height: 100vh;
 }
 
-.row {
-    align-content: center;
-}
-
 .row-cols-2>* {
     padding-bottom: 50%;
     height: 0;
     position: relative;
+}
+
+.cocktail-card-picture {
+    display: none;
+    height: auto;
+    max-width: 100%;
+}
+
+.card-text {
+    display: none;
+    text-align: center;
+    
 }
 
 footer {

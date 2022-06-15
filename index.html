@@ -14,7 +14,10 @@
 </head>
 
 <body class="">
+
+    <!-- HEADER -->
     <header class="">
+
         <nav class="navbar navbar-expand-sm h-100 justify-content-between pina-colour1">
             <ul class="navbar-nav">
                 <li class="navbar-item">
@@ -37,113 +40,100 @@
             </span>
         </nav>
 
-
     </header>
 
-     <!-- Landing Page -->
+    <!-- Landing Page -->
     <main class="d-none">
-
         <section id="home-page" class="d-none">
             <div class="container-fluid bg-primary">
-                <h1> Home Page</h1>
+                <h1>Home Page</h1>
             </div>
-
         </section>
     </main>
 
     <!-- How To -->
     <main class="d-none">
-         <section id="how-to" class="d-none">
+        <section id="how-to" class="d-none">
             <div class="container-fluid bg-success">
                 <h2>How to</h2>
             </div>
         </section>
     </main>
 
-       
+    <!-- Game Page -->
+    <main id="game-page">
+        <div class="container d-flex align-items-center">
+            <!-- ROW START-->
+            <div class="row row-cols-2 row-cols-lg-4 h-100">
 
-        <!-- Game Page -->
-        <main id="game-page">
-            <div class="container">
-
-                <!-- ROW START-->
-                <div class="row row-cols-2 row-cols-lg-4 h-100">
-                    <!-- CARD 1 -->
-                    <div class="col game-card-col">
-                        <div class="card overflow-hidden game-card">
-                            <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
-                            <img src="src/imgs/cards/cocktail-card-aperol-spritz.png"
-                                class="d-none cocktail-card-picture">
-                        </div>
-                    </div>
-
-                      <!-- CARD 2 -->
-                    <div class="col game-card-col">
-                        <div class="card overflow-hidden game-card">
-                            <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
-                            <img src="src/imgs/cards/cocktail-card-aperol-spritz.png"
-                                class="d-none cocktail-card-picture">
-                        </div>
-                    </div>
-
-                      <!-- CARD 3 -->
-                    <div class="col game-card-col">
-                        <div class="card overflow-hidden game-card">
-                            <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
-                            <img src="src/imgs/cards/cocktail-card-aperol-spritz.png"
-                                class="d-none cocktail-card-picture">
-                        </div>
-                    </div>
-
-                    <!-- CARD 4 -->
-                    <div class="col game-card-col">
-                        <div class="card overflow-hidden game-card">
-                            <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
-                            <img src="src/imgs/cards/cocktail-card-aperol-spritz.png"
-                                class="d-none cocktail-card-picture">
-                        </div>
-                    </div>
-
-                    <!-- CARD 5 -->
-                    <div class="col game-card-col">
-                        <div class="card overflow-hidden game-card">
-                            <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
-                            <img src="src/imgs/cards/cocktail-card-aperol-spritz.png"
-                                class="d-none cocktail-card-picture">
-                        </div>
-                    </div>
-
-                    <!-- CARD 6 -->
-                    <div class="col game-card-col">
-                        <div class="card overflow-hidden game-card">
-                            <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
-                            <img src="src/imgs/cards/cocktail-card-aperol-spritz.png"
-                                class="d-none cocktail-card-picture">
-                        </div>
-                    </div>
-
-                    <!-- CARD 7 -->
-                    <div class="col game-card-col">
-                        <div class="card overflow-hidden game-card">
-                            <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
-                            <img src="src/imgs/cards/cocktail-card-aperol-spritz.png"
-                                class="d-none cocktail-card-picture">
-                        </div>
-                    </div>
-
-                    <!-- CARD 8 --> 
-                    <div class="col game-card-col">
-                        <div class="card overflow-hidden game-card">
-                            <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
-                            <img src="src/imgs/cards/cocktail-card-aperol-spritz.png"
-                                class="d-none cocktail-card-picture">
-                        </div>
+                <!-- PAIR 1 - IMAGE -->
+                <div class="col game-card-col">
+                    <div class="card overflow-hidden game-card">
+                        <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img pair1" id="card1-back">
+                        <img src="src/imgs/cards/cocktail-card-aperol-spritz.png" class="cocktail-card-picture" id="card1-front">
                     </div>
                 </div>
-                <!-- ROW END -->
 
+                <!-- PAIR 1 - TEXT -->
+                <div class="col game-card-col">
+                    <div class="card overflow-hidden game-card pair1">
+                        <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img" id="card2-back">
+                        <p class="card-text" id="card2-front">Aperol Spritz</p>
+                    </div>
+                </div>
+
+                <!-- PAIR 2 - IMAGE -->
+                <div class="col game-card-col">
+                    <div class="card overflow-hidden game-card">
+                        <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
+                        <img src="src/imgs/cards/cocktail-card-cosmopolitan.png" class="cocktail-card-picture">
+                    </div>
+                </div>
+
+                <!-- PAIR 2 - TEXT -->
+                <div class="col game-card-col">
+                    <div class="card overflow-hidden game-card">
+                        <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
+                        <p class="card-text ">Cosmopolitan</p>
+                    </div>
+                </div>
+
+                <!-- PAIR 3 - IMAGE -->
+                <div class="col game-card-col">
+                    <div class="card overflow-hidden game-card">
+                        <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
+                        <img src="src/imgs/cards/cocktail-card-espresso-martini.png" class=" cocktail-card-picture">
+                    </div>
+                </div>
+
+                <!-- PAIR 3 - TEXT -->
+                <div class="col game-card-col">
+                    <div class="card overflow-hidden game-card">
+                        <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
+                        <p class="card-text ">Espresso Martini</p>
+                    </div>
+                </div>
+
+                <!-- PAIR 4 - IMAGE -->
+                <div class="col game-card-col">
+                    <div class="card overflow-hidden game-card">
+                        <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
+                        <img src="src/imgs/cards/cocktail-card-pina-colada.png" class=" cocktail-card-picture">
+                    </div>
+                </div>
+
+                <!-- PAIR 4 - TEXT -->
+                <div class="col game-card-col">
+                    <div class="card overflow-hidden game-card">
+                        <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img">
+                        <p class="card-text ">Pina Colada</p>
+                    </div>
+                </div>
             </div>
-        </main>
+            <!-- ROW END -->
+
+        </div>
+    </main>
 
 
     </main>
