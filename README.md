@@ -72,6 +72,7 @@ The code can be run locally by downloading from my GitHub repository following t
 
 # Credits
 
+https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceWith
 ## Content
 
 https://getbootstrap.com/docs/5.0/components/card/ - implementing card layout on game page
