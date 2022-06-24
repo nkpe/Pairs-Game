@@ -22,17 +22,17 @@ The purpose of this game is to help the user learn the basics of mixology by rec
 ## about.html
 
 
-## portfolio.html
-
-## contact.html
-
-
 # Features to be implemented
-
+* **Countdown timer** - where game times out if the user takes too long to complete the game.
+* **Animations** - flip animations on the cards.
+* **Levels** - easy to hard. Harder levels = more pairs to do.
+* **Feedback Page** - for the user to send feedback.
+* **Info Page** - for user to find more information on each cocktail.
 
 # Technologies used
 * **HTML 5** - used to create the basic content of the website.
 * **CSS3** - used to add custom styling to the content of the webpage. 
+* **JavaScript** - heavily used for the game logic (randomise card, check for correct pairs and reset the pack).
 * **Font Awesome** - the project used Font Awesome GitHub and LinkedIn fonts for the social media links.
 * **Google Fonts** - used to import a custom font to style the text. 
 * **Git** - this was used during production to efficiently commit and push changes to the GitHub repository so no code could be lost. 
