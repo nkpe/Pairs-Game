@@ -6,9 +6,11 @@ body header {
     background-color: #f7325e;
 }
 
-/* body * {
-    color: #fef8cf;
-} */
+body * {
+    /* color: #fef8cf; */
+    font-family: 'Poiret One', cursive;
+    font-weight: 800;
+}
 
 .bi {
     font-size: 40px;

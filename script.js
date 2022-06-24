@@ -13,15 +13,21 @@
 // Inital Pairs - Aperol Spritz, Cosmopolitan, Espresso Martini, Pina Colada, 
 
 //Loading Content for Cards
+const aperolImgSrc = "src/imgs/cards/cocktail-card-aperol-spritz.png";
+const aperolTextSrc = "Aperol Spritz";
+const cosmoImgSrc = "src/imgs/cards/cocktail-card-cosmopolitan.png";
+const cosmoTextSrc = "Cosmopolitan";
+const espressoMartiniImgSrc = "src/imgs/cards/cocktail-card-espresso-martini.png";
+const espressoMartiniTextSrc = "Espresso Martini";
+const pinaColadaImgSrc = "src/imgs/cards/cocktail-card-pina-colada.png";
+const pinaColadaTextSrc = "Pina Colada";
+
 
 window.onload = function () {
-    const aperolImgSrc = "src/imgs/cards/cocktail-card-aperol-spritz.png";
-    const aperolTextSrc = "Aperol Spritz";
-
-
     //Variable from HTML document
     let cards = document.querySelectorAll("div.card");
-    // let newContent = document.createElement("div");
+
+    //GET ALL CONTENT AND RANDOMISE THROUGHOUT THE CARDS (BY GETTING CARDS BY ID. )
 
     //Objects to define
     function cardContent(cardImg, id) {
@@ -29,28 +35,54 @@ window.onload = function () {
         this.id = id;
     };
 
+    let cardContentArray = [];
    
     const aperolImg = new cardContent(aperolImgSrc, 1);
+    cardContentArray.push(aperolImg);
     const aperolText = new cardContent(aperolTextSrc, 1);
-    //
+    cardContentArray.push(aperolText);
+    const cosmoImg = new cardContent(cosmoImgSrc, 2);
+    cardContentArray.push(cosmoImg);
+    const cosmoText = new cardContent(cosmoTextSrc, 2);
+    cardContentArray.push(cosmoText);
+    const espressoMartiniImg = new cardContent(espressoMartiniImgSrc, 3);
+    cardContentArray.push(espressoMartiniImg);
+    const espressoMartiniText = new cardContent(espressoMartiniTextSrc, 3);
+    cardContentArray.push(espressoMartiniText);
+    const pinaColadaImg = new cardContent(pinaColadaImgSrc, 4);
+    cardContentArray.push(pinaColadaImg);
+    const pinaColadaText = new cardContent(pinaColadaTextSrc, 4);
+    cardContentArray.push(pinaColadaText);
 
+    console.log(cardContentArray.length);
+    console.log(`Card Content Array :`,cardContentArray);
+
+    const shuffleCardContents = (array) => {
+        for (let i = array.length - 1; i > 0; i--){
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array;
+    };
+
+    let shuffled = shuffleCardContents(cardContentArray);
+
+    console.log(shuffled);
+
+
+    
     // Logic for click event
     let cardFlip = (e) => {
-        let cardSelected = e.srcElement.offsetParent;
-        let cardClicked = e.srcElement.offsetParent.id;
-        console.log(cardSelected);
-        console.log(cardClicked);
+        let cardElement = e.srcElement.offsetParent;
         // console.log(e);
-
         let cardReplace = () => {
-
-            console.log("is Cocktail Image show?");
-
-            let imgBack = cardSelected.querySelector(".card-img");
+            //selecting element containing card back
+            let imgBack = cardElement.querySelector(".card-img");
             console.log(imgBack);
-
-            imgBack.src = aperolImg.cardImg;
-
+            imgBack.style.display = "none";
+            
         }
         cardReplace();
 

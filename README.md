@@ -73,6 +73,7 @@ The code can be run locally by downloading from my GitHub repository following t
 # Credits
 
 https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceWith
+https://stackoverflow.com/questions/19526456/get-all-instances-of-class-in-javascript
 ## Content
 
 https://getbootstrap.com/docs/5.0/components/card/ - implementing card layout on game page
