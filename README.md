@@ -3,10 +3,10 @@
 
 Write a README.md file for your project that explains what the project does and the value that it provides to its users. Attribute any code from other sources. Document all testing procedures and findings. -->
 
-# Personal Portfolio - Project One
+# Pairs Game - Project Two
 <!-- explains what the project does and the value that it provides to its users. -->
 
-The purpose of this game is to help the user learn the basics of mixology but recognising and naming classic cocktails. 
+The purpose of this game is to help the user learn the basics of mixology by recognising and naming classic cocktails. 
 
 # UX
 
@@ -51,7 +51,7 @@ To validate my CSS code I used [W3C CSS Validation Service](https://jigsaw.w3.or
 
 # Deployment
 
-The page has been deployed to GitHub pages for hosting - [My Portfolio hosted on GitHub pages](https://nkpe.github.io/Pairs-Game/).
+The page has been deployed to GitHub pages for hosting - [Pairs Game hosted on GitHub pages](https://nkpe.github.io/Pairs-Game/).
 
 I followed the following steps to deploy to GitHub pages: 
 
