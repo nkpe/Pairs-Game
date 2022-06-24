@@ -1,0 +1,77 @@
+body header {
+    height: 100px;
+}
+
+.pina-colour1 {
+    background-color: #f7325e;
+}
+
+body * {
+    /* color: #fef8cf; */
+    font-family: 'Poiret One', cursive;
+    font-weight: 800;
+}
+
+.bi {
+    font-size: 40px;
+}
+
+#home-page {
+    min-height: 100vh
+}
+
+main, .container {
+    min-height: 100vh;
+}
+
+.row-cols-2>* {
+    padding-bottom: 50%;
+    height: 0;
+    position: relative;
+}
+
+.cocktail-card-picture {
+    display: none;
+    height: auto;
+    max-width: 100%;
+}
+
+.card-text {
+    display: none;
+    text-align: center;
+    
+}
+
+footer {
+    height: 200px;
+    width: 100%;
+    bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .row-cols-lg-4>* {
+        padding-bottom: 25%;
+        height: 0;
+        position: relative;
+    }
+}
+
+
+/* .card {
+    height: 100%;
+} */
+
+
+
+/* .cocktail-card-back{
+    height: 100%;
+    width: auto;
+}
+
+.card-row {
+    height: 100px;
+}
+
+.card-col , .card , .card-body{
+    height: 100%;
+} */

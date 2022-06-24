@@ -48,7 +48,7 @@ To validate my HTML code I used [W3C Markup Validation Service](https://validato
 
 To validate my CSS code I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_upload).
 ## Interesting Bugs / Problems
-My photo on homepage (particularly responsiveness)
+
 # Deployment
 
 The page has been deployed to GitHub pages for hosting - [My Portfolio hosted on GitHub pages](https://nkpe.github.io/Pairs-Game/).
@@ -70,12 +70,19 @@ The code can be run locally by downloading from my GitHub repository following t
 3. If downloading ZIP, this should be unzipped before running the website locally. 
 
 
-<!-- # Credits
+# Credits
 
+https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceWith
+https://stackoverflow.com/questions/19526456/get-all-instances-of-class-in-javascript
 ## Content
 
+https://getbootstrap.com/docs/5.0/components/card/ - implementing card layout on game page
 
+
+http://alistapart.com/article/creating-intrinsic-ratios-for-video/ - Sizing ratio for the cards on game page.
 ## Media
-  -->
+## Styling
+https://www.color-hex.com/color-palette/42 48
+
 ## Acknowledgements 
 * 
