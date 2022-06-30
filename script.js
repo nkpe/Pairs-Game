@@ -55,7 +55,7 @@ const shuffleCardContents = (array) => {
 
 let shuffled = shuffleCardContents(cardContentArray);
 
-console.log("This is shuffled array:", shuffled);
+// console.log("This is shuffled array:", shuffled);
 
 
 // Assigning shuffled content to each card
@@ -80,31 +80,65 @@ console.log("This is shuffled array:", shuffled);
 //     console.log(e);
 // };
 
-let index = 0;
 
+
+let clickEvent1Result = null;
 // Get id of card clicked and match to index from cards array. 
 let cardFlip = (e) => {
+    let index = 0;
     let cardClicked = e.target.id;
+
     for (let i=0; i<cards.length; i++){
     //loop through cards until id matched cardClicked
         let cardsID = cards[i].id;
         if (cardsID === cardClicked){
             index = i;
-            console.log("This is the selected index:", index);
+            // console.log("This is the selected index:", index);
             break;
         }
     };
-    console.log("This is event object", e);
-    cardReplace(e);
+
+    // console.log("This is event object", e);
+
+    if(clickEvent1Result == null){
+        clickEvent1Result = shuffled[index];
+        e.target.src = clickEvent1Result.cardImg;
+        console.log("1st Click Event", clickEvent1Result);
+    } else {
+        let clickEvent2Result = shuffled[index];
+        e.target.src = clickEvent2Result.cardImg;
+        console.log("2nd Click Event")
+        if(clickEvent1Result.id === clickEvent2Result.id){
+            console.log("Congrats you've made a match");
+        } else {
+            console.log("This is not a match");
+        }
+        clickEvent1Result = null;
+    };
+    
+    console.log("Current Index from shuffled", clickEvent1Result);
+    index = 0;
+    // cardsCompare(e);
 };
+
+
+
+console.log("0 Click Event", clickEvent1Result)
 
 //Place index into content array to get content in same index. 
-let cardReplace = (e) => {
-    let clickedCardContent = shuffled[index];
-    e.target.src = clickedCardContent.cardImg;
-    console.log("Current Index from shuffled", clickedCardContent);
-};
 
+//Store ClickEvent1 & Get Click Event 2
+// let cardsCompare = (e) => {
+    
+// };
+
+
+
+
+//Compare Click Events 1&2 - create  a 'true' & 'false' result. 
+
+
+// Clear Events 1&2
 
 
 
