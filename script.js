@@ -1,9 +1,8 @@
 "use strict";
 
-
 // Inital Pairs - Aperol Spritz, Cosmopolitan, Espresso Martini, Pina Colada, 
 
-//Variable from HTML document
+//Getting all card back images from HTML and putting into an array
 let cards = Array.from(document.querySelectorAll("div.card > img"));
 
 //Loading Content for Cards
@@ -16,13 +15,16 @@ const espressoMartiniTextSrc = "src/imgs/cards-text/cocktail-cards-text-espresso
 const pinaColadaImgSrc = "src/imgs/cards/cocktail-card-pina-colada.png";
 const pinaColadaTextSrc = "src/imgs/cards-text/cocktail-cards-text-pina-colada.png";
 
+//Array to store card content
 let cardContentArray = [];
-//Object defined
+
+//Card contents object defined
 function cardContent(cardImg, id) {
     this.cardImg = cardImg;
     this.id = id;
 };
 
+// Card content objects created
 const aperolImg = new cardContent(aperolImgSrc, 1);
 cardContentArray.push(aperolImg);
 const aperolText = new cardContent(aperolTextSrc, 1);
@@ -40,7 +42,7 @@ cardContentArray.push(pinaColadaImg);
 const pinaColadaText = new cardContent(pinaColadaTextSrc, 4);
 cardContentArray.push(pinaColadaText);
 
-//GET ALL CONTENT AND RANDOMISE THROUGHOUT THE CARDS (BY GETTING CARDS BY ID.)
+//shuffles card contents so they are randomly organised in an array.   https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
 const shuffleCardContents = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -53,35 +55,64 @@ const shuffleCardContents = (array) => {
 
 let shuffled = shuffleCardContents(cardContentArray);
 
-console.log(shuffled);
-console.log(cards);
-
-// Assigning content to each card
-let contentAssign = () => {
-    for (let i=0; i<cards.length; i++){
-    cards[i].src = cardContentArray[i];
-};
-};
+console.log("This is shuffled array:", shuffled);
 
 
-// Logic for click event
+// Assigning shuffled content to each card
+// let contentAssign = () => {
+//     for (let i = cards[i]; i < cards.length; i++) {
+//        shuffled[i].cardImg;
+//     };
+// };
+// contentAssign();
+
+// // Logic for click event
+// let cardFlip = (e) => {
+//     let cardElement = e.srcElement.offsetParent;
+//     let cardReplace = () => {
+//         //selecting element containing card back
+//         let imgBack = cardElement.querySelector(".card-img");
+//         console.log(imgBack);
+//         imgBack.src = aperolText.cardImg;  //REPLACE APEROLTEXT WITH RANDOM NUMBER MATCHING CARD 
+
+//     }
+//     cardReplace();
+//     console.log(e);
+// };
+
+let index = 0;
+
+// Get id of card clicked and match to index from cards array. 
 let cardFlip = (e) => {
-    let cardElement = e.srcElement.offsetParent;
-    let cardReplace = () => {
-        //selecting element containing card back
-        let imgBack = cardElement.querySelector(".card-img");
-        console.log(imgBack);
-        imgBack.src = aperolText.cardImg;  //REPLACE THIS APEROLIMG WITH RANDOM NUMBER MATCHING CARD 
-
-    }
-    cardReplace();
-    console.log(e);
+    let cardClicked = e.target.id;
+    for (let i=0; i<cards.length; i++){
+    //loop through cards until id matched cardClicked
+        let cardsID = cards[i].id;
+        if (cardsID === cardClicked){
+            index = i;
+            console.log("This is the selected index:", index);
+            break;
+        }
+    };
+    console.log("This is event object", e);
+    cardReplace(e);
 };
+
+//Place index into content array to get content in same index. 
+let cardReplace = (e) => {
+    let clickedCardContent = shuffled[index];
+    e.target.src = clickedCardContent.cardImg;
+    console.log("Current Index from shuffled", clickedCardContent);
+};
+
 
 
 
 for (let i = 0; i < cards.length; i++) {
     cards[i].onclick = cardFlip;
 };  //end logic for click event
+
+
+console.log(cards);
 
 
