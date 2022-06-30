@@ -3,10 +3,10 @@
 
 Write a README.md file for your project that explains what the project does and the value that it provides to its users. Attribute any code from other sources. Document all testing procedures and findings. -->
 
-# Personal Portfolio - Project One
+# Pairs Game - Project Two
 <!-- explains what the project does and the value that it provides to its users. -->
 
-The purpose of this game is to help the user learn the basics of mixology but recognising and naming classic cocktails. 
+The purpose of this game is to help the user learn the basics of mixology by recognising and naming classic cocktails. 
 
 # UX
 
@@ -22,17 +22,17 @@ The purpose of this game is to help the user learn the basics of mixology but re
 ## about.html
 
 
-## portfolio.html
-
-## contact.html
-
-
 # Features to be implemented
-
+* **Countdown timer** - where game times out if the user takes too long to complete the game.
+* **Animations** - flip animations on the cards.
+* **Levels** - easy to hard. Harder levels = more pairs to do.
+* **Feedback Page** - for the user to send feedback.
+* **Info Page** - for user to find more information on each cocktail.
 
 # Technologies used
 * **HTML 5** - used to create the basic content of the website.
 * **CSS3** - used to add custom styling to the content of the webpage. 
+* **JavaScript** - heavily used for the game logic (randomise card, check for correct pairs and reset the pack).
 * **Font Awesome** - the project used Font Awesome GitHub and LinkedIn fonts for the social media links.
 * **Google Fonts** - used to import a custom font to style the text. 
 * **Git** - this was used during production to efficiently commit and push changes to the GitHub repository so no code could be lost. 
@@ -51,7 +51,7 @@ To validate my CSS code I used [W3C CSS Validation Service](https://jigsaw.w3.or
 
 # Deployment
 
-The page has been deployed to GitHub pages for hosting - [My Portfolio hosted on GitHub pages](https://nkpe.github.io/Pairs-Game/).
+The page has been deployed to GitHub pages for hosting - [Pairs Game hosted on GitHub pages](https://nkpe.github.io/Pairs-Game/).
 
 I followed the following steps to deploy to GitHub pages: 
 
