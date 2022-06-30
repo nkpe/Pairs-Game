@@ -1,8 +1,3 @@
-
-<!-- Criteria 
-
-Write a README.md file for your project that explains what the project does and the value that it provides to its users. Attribute any code from other sources. Document all testing procedures and findings. -->
-
 # Pairs Game - Project Two
 <!-- explains what the project does and the value that it provides to its users. -->
 
@@ -48,7 +43,7 @@ To validate my HTML code I used [W3C Markup Validation Service](https://validato
 
 To validate my CSS code I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_upload).
 ## Interesting Bugs / Problems
-
+* **Image Loading Time** - when the cards clicked on the images take a time to load, seeming as though the click was not registered. Image files too large ??
 # Deployment
 
 The page has been deployed to GitHub pages for hosting - [Pairs Game hosted on GitHub pages](https://nkpe.github.io/Pairs-Game/).
@@ -74,6 +69,10 @@ The code can be run locally by downloading from my GitHub repository following t
 
 https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceWith
 https://stackoverflow.com/questions/19526456/get-all-instances-of-class-in-javascript
+
+<!-- random function -->
+
+https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
 ## Content
 
 https://getbootstrap.com/docs/5.0/components/card/ - implementing card layout on game page
