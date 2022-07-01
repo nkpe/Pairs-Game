@@ -43,7 +43,8 @@ To validate my HTML code I used [W3C Markup Validation Service](https://validato
 
 To validate my CSS code I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_upload).
 ## Interesting Bugs / Problems
-* **Image Loading Time** - when the cards clicked on the images take a time to load, seeming as though the click was not registered. Image files too large ??
+* **Image Loading Time** - when the cards clicked on the images take a time to load, seeming as though the click was not registered. Image files too large.
+
 # Deployment
 
 The page has been deployed to GitHub pages for hosting - [Pairs Game hosted on GitHub pages](https://nkpe.github.io/Pairs-Game/).
