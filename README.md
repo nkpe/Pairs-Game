@@ -74,9 +74,13 @@ https://stackoverflow.com/questions/19526456/get-all-instances-of-class-in-javas
 <!-- random function -->
 
 https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
+<!-- box shadow all around  -->
+https://stackoverflow.com/questions/6821295/add-css-box-shadow-around-the-whole-div 
 ## Content
 
 https://getbootstrap.com/docs/5.0/components/card/ - implementing card layout on game page
+
+https://getbootstrap.com/docs/5.2/components/modal/#how-it-works
 
 
 http://alistapart.com/article/creating-intrinsic-ratios-for-video/ - Sizing ratio for the cards on game page.

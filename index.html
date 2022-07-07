@@ -32,34 +32,39 @@
                 </li>
             </ul>
 
-            <span id="header-branding"
+            <div id="header-branding"
                 class="navbar-brand h-100 d-inline-flex flex-row align-items-center flex-nowrap p-0 m-0">
                 <img src="src/imgs/cocktail-logo.svg" class="h-100" />
                 <h1>Pair-colada</h1>
-            </span>
+            </div>
 
             <span id="how-btn-container" class="navbar-item h-100">
-                <a href="#how-to" class="nav-link h-100 d-inline-flex align-items-center"><i
-                        class="bi bi-patch-question"></i></a>
+                <a href="#" id="how-btn" class="nav-link h-100 d-inline-flex align-items-center"><i class="bi bi-patch-question"></i></a>
             </span>
         </nav>
 
     </header>
+
+    <!-- How to Modal -->
+    <div class="modal" id="how-to-modal" tabindex="-1">
+        <div class="modal-dialogue vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>How to Play</h2>
+                    <button type="button" id="how-modal-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Click Each</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Landing Page -->
     <main class="d-none">
         <section id="home-page" class="d-none">
             <div class="container-fluid bg-primary">
                 <h1>Home Page</h1>
-            </div>
-        </section>
-    </main>
-
-    <!-- How To -->
-    <main class="d-none">
-        <section id="how-to" class="d-none">
-            <div class="container-fluid bg-success">
-                <h2>How to</h2>
             </div>
         </section>
     </main>
@@ -74,7 +79,7 @@
                 <div class="col game-card-col">
                     <div class="card overflow-hidden game-card" id="card1">
                         <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img"
-                            id="card1-back">
+                            id="card1-back" alt="back of cards showing umbrella pattern">
                     </div>
                 </div>
 
@@ -82,7 +87,7 @@
                 <div class="col game-card-col">
                     <div class="card overflow-hidden game-card" id="card2">
                         <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img"
-                            id="card2-back">
+                            id="card2-back" alt="back of cards showing umbrella pattern">
                     </div>
                 </div>
 
@@ -90,7 +95,7 @@
                 <div class="col game-card-col">
                     <div class="card overflow-hidden game-card" id="card3">
                         <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img"
-                            id="card3-back">
+                            id="card3-back" alt="back of cards showing umbrella pattern">
                     </div>
                 </div>
 
@@ -98,7 +103,7 @@
                 <div class="col game-card-col">
                     <div class="card overflow-hidden game-card" id="card4">
                         <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img"
-                            id="card4-back">
+                            id="card4-back" alt="back of cards showing umbrella pattern">
                     </div>
                 </div>
 
@@ -106,7 +111,7 @@
                 <div class="col game-card-col">
                     <div class="card overflow-hidden game-card" id="card5">
                         <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img"
-                            id="card5-back">
+                            id="card5-back" alt="back of cards showing umbrella pattern">
                     </div>
                 </div>
 
@@ -114,7 +119,7 @@
                 <div class="col game-card-col">
                     <div class="card overflow-hidden game-card" id="card6">
                         <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img"
-                            id="card6-back">
+                            id="card6-back" alt="back of cards showing umbrella pattern">
                     </div>
                 </div>
 
@@ -122,7 +127,7 @@
                 <div class="col game-card-col">
                     <div class="card overflow-hidden game-card" id="card7">
                         <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img pair1"
-                            id="card7-back">
+                            id="card7-back" alt="back of cards showing umbrella pattern">
                     </div>
                 </div>
 
@@ -130,16 +135,13 @@
                 <div class="col game-card-col">
                     <div class="card overflow-hidden game-card" id="card8">
                         <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img"
-                            id="card8-back">
+                            id="card8-back" alt="back of cards showing umbrella pattern">
                     </div>
                 </div>
             </div>
             <!-- ROW END -->
 
         </div>
-    </main>
-
-
     </main>
 
     <footer class="pina-colour1">
