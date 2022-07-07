@@ -1,5 +1,25 @@
 "use strict";
 
+// Show how to button
+let howtoButton = document.getElementById("how-btn");
+let howtoButtonClose = document.getElementById("how-modal-close");
+let howtoModal = document.getElementById("how-to-modal");
+console.log(howtoButton);
+
+
+let howtoModalShow = (e) => {
+    howtoModal.style.display = "block";
+};
+
+let howtoModalHide = (e) => {
+    howtoModal.style.display = "none";
+}
+
+howtoButton.onclick = howtoModalShow;
+howtoButtonClose.onclick = howtoModalHide;
+
+
+
 // Inital Pairs - Aperol Spritz, Cosmopolitan, Espresso Martini, Pina Colada, 
 
 //Getting all card back images from HTML and putting into an array
@@ -138,6 +158,8 @@ let pairValidate = () => {
     console.log("START pair validate function");
     if (clickEvent2Result !== null && clickEvent1Result.id === clickEvent2Result.id) {
         console.log("Congrats you've made a match");
+        cardClicked1.style.opacity = "0.4";
+        cardClicked2.style.opacity = "0.4";
         clickEvent1Result = null;
         clickEvent2Result = null;
         cardClicked1 = null;
@@ -151,9 +173,7 @@ let pairValidate = () => {
         clickEvent1Result = null;
         clickEvent2Result = null;
         cardClicked1 = null;
-        cardClicked2 = null;
-
-        
+        cardClicked2 = null;    
     };
     console.log("END pair validate function");
 };
@@ -188,8 +208,5 @@ for (let i = 0; i < cards.length; i++) {
     cards[i].onclick = cardFlip;
 
 };  //end logic for click event
-
-
-console.log(cards);
 
 

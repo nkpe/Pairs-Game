@@ -30,6 +30,10 @@ main, .container {
     position: relative;
 }
 
+.card { 
+    box-shadow: 0 0 5px grey;
+    border: 0;
+}
 .cocktail-card-picture {
     display: none;
     height: auto;
