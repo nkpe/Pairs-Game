@@ -15,6 +15,7 @@ let howtoModalHide = (e) => {
     howtoModal.style.display = "none";
 }
 
+howtoModalShow();
 howtoButton.onclick = howtoModalShow;
 howtoButtonClose.onclick = howtoModalHide;
 
@@ -146,7 +147,7 @@ let cardFlip = (e) => {
         e.target.src = clickEvent2Result.cardImg;
 
         console.log("2nd Click Event" , cardClicked2 , clickEvent2Result);
-        setTimeout( pairValidate , 2000 );
+        setTimeout( pairValidate , 1000 );
         cardClicked = null;
         //comparing object id's to check for a match
     };
