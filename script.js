@@ -85,8 +85,13 @@ let clickEvent2Result = null;
 let storeCardClicks = (e) => {
     console.log("START click event function");
     //store both cards clicked (by element).
-    if (cardClicked1 === null) {
-         //store first clicked element and assign content.
+    console.log(e);
+    console.log(e.target.className)
+    if (e.target.className !== "cocktail-card-back card-img") {
+        console.log("running -  != img back");
+        return;
+    } else if (cardClicked1 === null) {
+        //store first clicked element and assign content.
         cardClicked1 = e.target;
         cardContentAssignment(e);
     } else if (cardClicked2 == null) {
@@ -98,13 +103,16 @@ let storeCardClicks = (e) => {
             return;
         } else {
             //if both clicks are not the same assign content to second card.
-            cardContentAssignment(e);  
+            cardContentAssignment(e);
         };
     } else {
-        console.log("Error second click is not reset");
-    };  
-    
+        return;
+    };
+
 };
+
+// CHECK IF TARGET SOURCE IS BACK OF CARD!
+
 
 let cardContentAssignment = (e) => {
     let index = 0;
@@ -120,10 +128,10 @@ let cardContentAssignment = (e) => {
         cardsID = null;
     };
     currentCardClicked = null;
-    cardFlip(index , e);
+    cardFlip(index, e);
 };
 
-let cardFlip = (index , e) => {
+let cardFlip = (index, e) => {
     // log first card clicked and compare to second clicked 
 
     if (clickEvent1Result === null) {
@@ -155,10 +163,13 @@ let pairValidate = () => {
         console.log("Congrats you've made a match");
         cardClicked1.style.opacity = "0.4";
         cardClicked2.style.opacity = "0.4";
+        cardClicked1.classList.remove("card-img");
+        cardClicked2.classList.remove("card-img");
         clickEvent1Result = null;
         clickEvent2Result = null;
         cardClicked1 = null;
         cardClicked2 = null;
+        gameEnd();
 
     } else if (clickEvent2Result !== null && clickEvent1Result.id !== clickEvent2Result.id) {
         //show card back again
@@ -171,6 +182,29 @@ let pairValidate = () => {
         cardClicked2 = null;
     };
     console.log("END pair validate function");
+};
+
+
+let gameEnd = () => {
+    console.log("Game end function running");
+    const allGameCards = document.getElementsByClassName("cocktail-card-back");
+
+    console.log(allGameCards);
+    let gameEnded = true;
+
+    for (let i = 0; i < allGameCards.length; i++) {
+        console.log(allGameCards[i].className, "outside if");
+        if (allGameCards[i].className === "cocktail-card-back card-img") {
+            gameEnded = false;
+            break;
+            // alert("Congrats you've completed the game");
+        };
+    };
+
+    if (gameEnded){
+        alert("Congratulations you've completed the game");
+    };
+
 };
 
 console.log("Current Index from shuffled", clickEvent1Result);
