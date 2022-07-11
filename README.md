@@ -71,6 +71,8 @@ The code can be run locally by downloading from my GitHub repository following t
 https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceWith
 https://stackoverflow.com/questions/19526456/get-all-instances-of-class-in-javascript
 
+https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html
+
 <!-- random function -->
 
 https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
@@ -84,6 +86,12 @@ https://getbootstrap.com/docs/5.2/components/modal/#how-it-works
 
 
 http://alistapart.com/article/creating-intrinsic-ratios-for-video/ - Sizing ratio for the cards on game page.
+
+
+Learn Page - 
+
+Aperol Spritz - https://en.wikipedia.org/wiki/Spritz_Veneziano
+B-52 - https://en.wikipedia.org/wiki/B-52_(cocktail)
 ## Media
 ## Styling
 https://www.color-hex.com/color-palette/42 48
