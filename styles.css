@@ -46,26 +46,40 @@ body * {
     align-items: center;
 }
 
+.learn-page-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 #learn-page-heading {
     text-align: center;
 }
 
 .learn-page-container section {
-    display: flex;
-    width: 100%;
+    display: inline-flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 25%;
+    width: 50%;
 }
 
-.learn-page-info-heading {
-    width: 100%;
+.learn-page-img-container {
+    display: flex;
+    align-items: center;
 }
 
-.learn-page-info-body {
-    width: 100%;
+.learn-page-info {
+    flex-grow: 2;
+    background-color: bisque;
+    height: 100%;
+    width: fit-content;
 }
+
+/* .learn-page-info-heading {
+    width: 100%;
+} */
 
 .recipe-link-container {
     border: 2px solid;
