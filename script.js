@@ -88,7 +88,7 @@ let shuffled = shuffleCardContents(cardContentArray);
 // contentAssign();
 
 // // Logic for click event
-// let cardFlip = (e) => {
+// let storeCardClicks = (e) => {
 //     let cardElement = e.srcElement.offsetParent;
 //     let cardReplace = () => {
 //         //selecting element containing card back
@@ -108,22 +108,31 @@ let clickEvent2Result = null;
 let cardClicked1 = null;
 let cardClicked2 = null;
 // Get id of card clicked and match to index from cards array. 
-let cardFlip = (e) => {
+let storeCardClicks = (e) => {
     console.log("START click event function");
     let index = 0;
     //store both cards clicked (by element)
     let cardClicked = e.target;
     if (cardClicked1 === null){
         cardClicked1 = e.target;
+        cardFlip(e);
     } else if (cardClicked2 == null) {
         cardClicked2 = e.target;
         if (cardClicked1 === cardClicked2){
             return ;
+        } else {
+            cardFlip(e);
         };
     } else {
         return ;
     };
 
+    cardContentAssignment(cardClicked);
+
+    // console.log("This is event object", e);
+};
+
+let cardContentAssignment = (cardClicked) => {
     for (let i = 0; i < cards.length; i++) {
         //loop through cards until id matches id of card clicked
         let cardsID = cards[i].id;
@@ -133,12 +142,12 @@ let cardFlip = (e) => {
             break;
         };
         cardsID = null;
+        cardClicked = null;
     };
+};
 
-    // console.log("This is event object", e);
-
-
-    //log first card clicked and compare to second clicked 
+let cardFlip = (e) => {
+    // log first card clicked and compare to second clicked 
     if (clickEvent1Result === null) {
         //getting index from object array
         clickEvent1Result = shuffled[index];
@@ -153,12 +162,15 @@ let cardFlip = (e) => {
 
         console.log("2nd Click Event" , cardClicked2 , clickEvent2Result);
         setTimeout( pairValidate , 1000 );
-        cardClicked = null;
+        
         //comparing object id's to check for a match
     };
     console.log("END click event function");
-    
 };
+
+
+
+
 
 let pairValidate = () => {
     console.log("START pair validate function");
@@ -183,6 +195,8 @@ let pairValidate = () => {
     };
     console.log("END pair validate function");
 };
+
+
 
 
 
@@ -211,7 +225,7 @@ console.log("0 Click Event", clickEvent1Result)
 
 
 for (let i = 0; i < cards.length; i++) {
-    cards[i].onclick = cardFlip;
+    cards[i].onclick = storeCardClicks;
 
 };  //end logic for click event
 
