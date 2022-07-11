@@ -115,8 +115,13 @@ let cardFlip = (e) => {
     let cardClicked = e.target;
     if (cardClicked1 === null){
         cardClicked1 = e.target;
-    } else {
+    } else if (cardClicked2 == null) {
         cardClicked2 = e.target;
+        if (cardClicked1 === cardClicked2){
+            return ;
+        };
+    } else {
+        return ;
     };
 
     for (let i = 0; i < cards.length; i++) {
