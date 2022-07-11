@@ -15,6 +15,7 @@ let howtoModalHide = (e) => {
     howtoModal.style.display = "none";
 }
 
+howtoModalShow();
 howtoButton.onclick = howtoModalShow;
 howtoButtonClose.onclick = howtoModalHide;
 
@@ -75,84 +76,86 @@ const shuffleCardContents = (array) => {
 
 let shuffled = shuffleCardContents(cardContentArray);
 
-// console.log("This is shuffled array:", shuffled);
-
-
-// Assigning shuffled content to each card
-// let contentAssign = () => {
-//     for (let i = cards[i]; i < cards.length; i++) {
-//        shuffled[i].cardImg;
-//     };
-// };
-// contentAssign();
-
-// // Logic for click event
-// let cardFlip = (e) => {
-//     let cardElement = e.srcElement.offsetParent;
-//     let cardReplace = () => {
-//         //selecting element containing card back
-//         let imgBack = cardElement.querySelector(".card-img");
-//         console.log(imgBack);
-//         imgBack.src = aperolText.cardImg;  //REPLACE APEROLTEXT WITH RANDOM NUMBER MATCHING CARD 
-
-//     }
-//     cardReplace();
-//     console.log(e);
-// };
-
-
-
-let clickEvent1Result = null;
-let clickEvent2Result = null;
 let cardClicked1 = null;
 let cardClicked2 = null;
+let clickEvent1Result = null;
+let clickEvent2Result = null;
+
 // Get id of card clicked and match to index from cards array. 
-let cardFlip = (e) => {
+let storeCardClicks = (e) => {
     console.log("START click event function");
-    let index = 0;
-    //store both cards clicked (by element)
-    let cardClicked = e.target;
-    if (cardClicked1 === null){
+    //store both cards clicked (by element).
+    console.log(e);
+    console.log(e.target.className)
+    if (e.target.className !== "cocktail-card-back card-img") {
+        console.log("running -  != img back");
+        return;
+    } else if (cardClicked1 === null) {
+        //store first clicked element and assign content.
         cardClicked1 = e.target;
-    } else {
+        cardContentAssignment(e);
+    } else if (cardClicked2 == null) {
+        //store second click and check it is not the same as first click.
         cardClicked2 = e.target;
+        if (cardClicked1 === cardClicked2) {
+            // however if both clicks are the same element, clear second click and return to function start.
+            cardClicked2 = null;
+            return;
+        } else {
+            //if both clicks are not the same assign content to second card.
+            cardContentAssignment(e);
+        };
+    } else {
+        return;
     };
 
+};
+
+// CHECK IF TARGET SOURCE IS BACK OF CARD!
+
+
+let cardContentAssignment = (e) => {
+    let index = 0;
+    let currentCardClicked = e.target;
     for (let i = 0; i < cards.length; i++) {
         //loop through cards until id matches id of card clicked
         let cardsID = cards[i].id;
-        if (cardsID === cardClicked.id) {
+        if (cardsID === currentCardClicked.id) {
             index = i;
             // console.log("This is the selected index:", index);
             break;
         };
         cardsID = null;
     };
+    currentCardClicked = null;
+    cardFlip(index, e);
+};
 
-    // console.log("This is event object", e);
+let cardFlip = (index, e) => {
+    // log first card clicked and compare to second clicked 
 
-
-    //log first card clicked and compare to second clicked 
     if (clickEvent1Result === null) {
         //getting index from object array
         clickEvent1Result = shuffled[index];
         //replacing img using object src
         e.target.src = clickEvent1Result.cardImg;
-        console.log("1st Click Event", cardClicked1 , clickEvent1Result);
+        console.log("1st Click Event", cardClicked1, clickEvent1Result);
 
     } else {
         clickEvent2Result = shuffled[index];
 
         e.target.src = clickEvent2Result.cardImg;
 
-        console.log("2nd Click Event" , cardClicked2 , clickEvent2Result);
-        setTimeout( pairValidate , 2000 );
-        cardClicked = null;
+        console.log("2nd Click Event", cardClicked2, clickEvent2Result);
+        setTimeout(pairValidate, 1000);
+
         //comparing object id's to check for a match
     };
     console.log("END click event function");
-    
 };
+
+
+
 
 let pairValidate = () => {
     console.log("START pair validate function");
@@ -160,52 +163,57 @@ let pairValidate = () => {
         console.log("Congrats you've made a match");
         cardClicked1.style.opacity = "0.4";
         cardClicked2.style.opacity = "0.4";
+        cardClicked1.classList.remove("card-img");
+        cardClicked2.classList.remove("card-img");
         clickEvent1Result = null;
         clickEvent2Result = null;
         cardClicked1 = null;
         cardClicked2 = null;
+        gameEnd();
 
     } else if (clickEvent2Result !== null && clickEvent1Result.id !== clickEvent2Result.id) {
         //show card back again
-        console.log("You've not made a match" , cardClicked1 , cardClicked2);
+        console.log("You've not made a match", cardClicked1, cardClicked2);
         cardClicked1.src = cardBackImgSrc;
         cardClicked2.src = cardBackImgSrc;
         clickEvent1Result = null;
         clickEvent2Result = null;
         cardClicked1 = null;
-        cardClicked2 = null;    
+        cardClicked2 = null;
     };
     console.log("END pair validate function");
 };
 
 
+let gameEnd = () => {
+    console.log("Game end function running");
+    const allGameCards = document.getElementsByClassName("cocktail-card-back");
+
+    console.log(allGameCards);
+    let gameEnded = true;
+
+    for (let i = 0; i < allGameCards.length; i++) {
+        console.log(allGameCards[i].className, "outside if");
+        if (allGameCards[i].className === "cocktail-card-back card-img") {
+            gameEnded = false;
+            break;
+            // alert("Congrats you've completed the game");
+        };
+    };
+
+    if (gameEnded){
+        alert("Congratulations you've completed the game");
+    };
+
+};
 
 console.log("Current Index from shuffled", clickEvent1Result);
-let index = 0;
-
-
 
 console.log("0 Click Event", clickEvent1Result)
 
-//Place index into content array to get content in same index. 
-
-//Store ClickEvent1 & Get Click Event 2
-// let cardsCompare = (e) => {
-
-// };
-
-
-
-
-//Compare Click Events 1&2 - create  a 'true' & 'false' result. 
-
-
-// Clear Events 1&2
-
-
 
 for (let i = 0; i < cards.length; i++) {
-    cards[i].onclick = cardFlip;
+    cards[i].onclick = storeCardClicks;
 
 };  //end logic for click event
 

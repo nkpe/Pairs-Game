@@ -39,22 +39,27 @@
             </div>
 
             <span id="how-btn-container" class="navbar-item h-100">
-                <a href="#" id="how-btn" class="nav-link h-100 d-inline-flex align-items-center"><i class="bi bi-patch-question"></i></a>
+                <a href="#" id="how-btn" class="nav-link h-100 d-inline-flex align-items-center"><i
+                        class="bi bi-patch-question"></i></a>
             </span>
         </nav>
 
     </header>
 
     <!-- How to Modal -->
-    <div class="modal" id="how-to-modal" tabindex="-1">
-        <div class="modal-dialogue vertical-align-center">
+    <div class="modal" id="how-to-modal" tabindex="-1" role="dialog" aria-labelledBy="modal-title">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2>How to Play</h2>
-                    <button type="button" id="how-modal-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2 id="modal-title">How to Play Pair-colada</h2>
+                    <button type="button" id="how-modal-close" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Click Each</p>
+                    <p>This game is designed to help learn and test your knowledge of classic cocktails.</p>
+                    <h4>How to Play:</h4>
+                    <p>Select a pair and if it turns faded then it is a pair. If it turns back over then it is
+                        incorrect.</p>
                 </div>
             </div>
         </div>
@@ -70,7 +75,7 @@
     </main>
 
     <!-- Game Page -->
-    <main id="game-page">
+    <main id="game-page">   
         <div class="container d-flex align-items-center">
             <!-- ROW START-->
             <div class="row row-cols-2 row-cols-lg-4 h-100">
@@ -126,7 +131,7 @@
                 <!-- CARD 7 -->
                 <div class="col game-card-col">
                     <div class="card overflow-hidden game-card" id="card7">
-                        <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img pair1"
+                        <img src="src/imgs/cards/cocktail-card-back.png" class="cocktail-card-back card-img"
                             id="card7-back" alt="back of cards showing umbrella pattern">
                     </div>
                 </div>
@@ -145,6 +150,13 @@
     </main>
 
     <footer class="pina-colour1">
+            <a class="github-link" href="https://github.com/nkpe/Pairs-Game" target=" _blank">
+                <img class="github-icon" src="src/imgs/github.svg" alt="GitHub Icon"/>
+                <div>Source Code</div>
+            </a>
+            <div id="copyright">&copy; Naomi Pearse 2022</div>
+            
+        </ul>
 
     </footer>
 

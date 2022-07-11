@@ -6,10 +6,19 @@ body header {
     background-color: #f7325e;
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
 body * {
     /* color: #fef8cf; */
     font-family: 'Poiret One', cursive;
     font-weight: 800;
+    color: rgb(20, 20, 20);
 }
 
 .bi {
@@ -22,13 +31,19 @@ body * {
 
 main, .container {
     min-height: 100vh;
+    padding-top: calc(var(--bs-gutter-x) * .5);
+    padding-bottom: calc(var(--bs-gutter-x) * .5);
 }
 
-.row-cols-2>* {
+.row> * {
+    padding: calc(var(--bs-gutter-x) * .5);
+}
+
+/* .row-cols-2>* {
     padding-bottom: 50%;
     height: 0;
     position: relative;
-}
+} */
 
 .card { 
     box-shadow: 0 0 5px grey;
@@ -47,18 +62,49 @@ main, .container {
 }
 
 footer {
-    height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    height: 50px;
     width: 100%;
     bottom: 0;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
 }
 
-@media screen and (min-width: 992px) {
+footer > * {
+    padding-left: 5px;
+    height: fit-content;
+}
+
+footer * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+footer .github-link {
+    width: auto;
+}
+
+footer .github-icon {
+    width: 1em;
+    height: 1em;
+}
+
+footer #copyright {
+    margin-left: auto;
+}
+
+/* @media screen and (min-width: 992px) {
     .row-cols-lg-4>* {
         padding-bottom: 25%;
         height: 0;
         position: relative;
     }
-}
+} */
 
 
 /* .card {
