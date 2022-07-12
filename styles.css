@@ -39,48 +39,6 @@ body * {
     border-color: rgb(20, 20, 20);
 }
 
-/* #learn-page {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-
-.learn-page-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#learn-page-heading {
-    text-align: center;
-}
-
-.learn-page-container section {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 25%;
-    width: 50%;
-}
-
-.learn-page-img-container {
-    display: flex;
-    align-items: center;
-}
-*/
-/* .learn-page-info {
-    flex-grow: 2;
-    background-color: bisque;
-    height: 100%;
-    width: fit-content;
-} 
-
-.learn-page-info-heading {
-    width: 100%;
-}  */
-
 .recipe-link-container {
     border: 2px solid;
     border-color:rgb(20, 20, 20);
@@ -97,12 +55,6 @@ main, .container {
     padding: calc(var(--bs-gutter-x) * .5);
 }
 
-/* .row-cols-2>* {
-    padding-bottom: 50%;
-    height: 0;
-    position: relative;
-} */
-
 .card { 
     box-shadow: 0 0 5px grey;
     border: 0;
@@ -115,7 +67,27 @@ main, .container {
 
 .card-text {
     display: none;
-    
+}
+
+
+
+/* Learn Page */
+.container-fluid {
+    padding-right: 102px;
+}
+
+#learn-page-heading {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    text-decoration: underline 2px;
+    background: orange;
+}
+
+.learn-page-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 footer {
@@ -156,31 +128,3 @@ footer .github-icon {
 footer #copyright {
     margin-left: auto;
 }
-
-/* @media screen and (min-width: 992px) {
-    .row-cols-lg-4>* {
-        padding-bottom: 25%;
-        height: 0;
-        position: relative;
-    }
-} */
-
-
-/* .card {
-    height: 100%;
-} */
-
-
-
-/* .cocktail-card-back{
-    height: 100%;
-    width: auto;
-}
-
-.card-row {
-    height: 100px;
-}
-
-.card-col , .card , .card-body{
-    height: 100%;
-} */

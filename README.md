@@ -92,6 +92,12 @@ Learn Page -
 
 Aperol Spritz - https://en.wikipedia.org/wiki/Spritz_Veneziano
 B-52 - https://en.wikipedia.org/wiki/B-52_(cocktail)
+Cosmopolitan - https://en.wikipedia.org/wiki/Cosmopolitan_(cocktail)#Preparation_and_serving
+Espresso Martini - https://en.wikipedia.org/wiki/Espresso_martini
+Long Island Iced Tea - https://en.wikipedia.org/wiki/Long_Island_iced_tea
+Margarita - https://en.wikipedia.org/wiki/Margarita
+Mojito - https://en.wikipedia.org/wiki/Mojito
+Pina Colada - 
 ## Media
 ## Styling
 https://www.color-hex.com/color-palette/42 48
