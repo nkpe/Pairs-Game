@@ -32,9 +32,8 @@
                 </li>
             </ul>
 
-            <div id="header-branding"
-                class="navbar-brand h-100 d-inline-flex flex-row align-items-center flex-nowrap p-0 m-0">
-                <img src="src/imgs/cocktail-logo.svg" class="h-100" alt="Logo for Pair-colada"/>
+            <div id="header-branding" class="navbar-brand h-100 d-inline-flex flex-row align-items-center flex-nowrap">
+                <img src="src/imgs/cocktail-logo.svg" class="h-100" alt="Logo for Pair-colada" />
                 <h1>Pair-colada</h1>
             </div>
 
@@ -121,6 +120,45 @@
         </div>
     </main>
 
+    <!-- How to Modal -->
+    <div class="modal" id="how-to-modal" tabindex="-1" role="dialog" aria-labelledBy="modal-title">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">How to Play Pair-colada</h2>
+                    <button type="button" id="how-modal-close" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This game is designed to help learn and test your knowledge of classic cocktails.</p>
+                    <h4>How to Play:</h4>
+                    <p>Select a pair and if it turns faded then it is a pair. If it turns back over then it is
+                        incorrect.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Ended Modal -->
+    <div class="modal" id="game-ended-modal" tabindex="-1" role="dialog" aria-labelledBy="modal-title">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" id="game-ended-modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Congratulations!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>You have successfully completed the game!<br />
+                        To play again click the bottom below. <br />
+                        To learn more about these cocktails, click the lean button.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Play Again</button>
+                    <button type="button" class="btn" data-dismiss="modal">Learn</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Learn Page -->
     <main id="learn-page" style="display: none;">
         <h2 id="learn-page-heading">Learn about the Cocktails</h2>
@@ -130,7 +168,8 @@
                 <section class="col" id="learn-aperol">
                     <div class="row row-cols-2">
                         <div class="col learn-page-img-container">
-                            <img src="src/imgs/cards/cocktail-card-aperol-spritz.png" class="img-fluid" alt="Aperol Spritz" />
+                            <img src="src/imgs/cards/cocktail-card-aperol-spritz.png" class="img-fluid"
+                                alt="Aperol Spritz" />
                         </div>
                         <div class="col learn-page-info">
                             <h3 class="learn-page-info-heading">Aperol Spritz</h3>
@@ -138,9 +177,7 @@
                                 <p>The Spritz, more commonly known as the Aperol Spritz, is an Italian wine-based
                                     cocktail, commonly served as an aperitif in Northeast Italy. It consists of
                                     prosecco, digestive bitters and soda water. </p>
-                                <div class="recipe-link-container">
-                                    <a href="https://iba-world.com/spritz/" target="_blank">Recipe</a>
-                                </div>
+                                <a href="https://iba-world.com/spritz/" target="_blank" class="recipe-link">Recipe</a>
                             </div>
                         </div>
                     </div>
@@ -149,7 +186,8 @@
                 <section class="col" id="learn-cosmopolitan">
                     <div class="row row-cols-2">
                         <div class="col learn-page-img-container">
-                            <img src="src/imgs/cards/cocktail-card-cosmopolitan.png" class="img-fluid" alt="Cosmopolitan"/>
+                            <img src="src/imgs/cards/cocktail-card-cosmopolitan.png" class="img-fluid"
+                                alt="Cosmopolitan" />
                         </div>
                         <div class="col learn-page-info">
                             <h3 class="learn-page-info-heading">Cosmopolitan</h3>
@@ -157,52 +195,12 @@
                                 <p>A cosmopolitan, or informally a cosmo, is a cocktail made with vodka, triple sec,
                                     cranberry juice, and freshly squeezed or sweetened lime juice. Its is typically
                                     served in a martini glass with a lime slice or orange peel garnish.</p>
-                                <div class="recipe-link-container">
-                                    <a href="https://iba-world.com/cosmopolitan/" target="_blank">Recipe</a>
-                                </div>
+                                <a href="https://iba-world.com/cosmopolitan/" target="_blank"
+                                    class="recipe-link">Recipe</a>
                             </div>
                         </div>
                     </div>
                 </section>
-            </div>
-
-            <!-- How to Modal -->
-            <div class="modal" id="how-to-modal" tabindex="-1" role="dialog" aria-labelledBy="modal-title">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title">How to Play Pair-colada</h2>
-                            <button type="button" id="how-modal-close" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>This game is designed to help learn and test your knowledge of classic cocktails.</p>
-                            <h4>How to Play:</h4>
-                            <p>Select a pair and if it turns faded then it is a pair. If it turns back over then it is
-                                incorrect.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Game Ended Modal -->
-            <div class="modal" id="game-ended-modal" tabindex="-1" role="dialog" aria-labelledBy="modal-title">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content" id="game-ended-modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title">Congratulations!</h2>
-                        </div>
-                        <div class="modal-body">
-                            <p>You have successfully completed the game!<br />
-                                To play again click the bottom below. <br />
-                                To learn more about these cocktails, click the lean button.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn" data-dismiss="modal">Play Again</button>
-                            <button type="button" class="btn" data-dismiss="modal">Learn</button>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="row row-cols-1 row-cols-xl-2">
@@ -210,7 +208,8 @@
                 <section class="col" id="learn-espresso-martini">
                     <div class="row row-cols-2">
                         <div class="col learn-page-img-container">
-                            <img src="src/imgs/cards/cocktail-card-espresso-martini.png" class="img-fluid" alt="Espresso Martini"/>
+                            <img src="src/imgs/cards/cocktail-card-espresso-martini.png" class="img-fluid"
+                                alt="Espresso Martini" />
                         </div>
                         <div class="col learn-page-info">
                             <h3 class="learn-page-info-heading">Espresso Martini</h3>
@@ -220,9 +219,8 @@
                                     vermouth, but is one of many drinks that incorporate the term martini into their
                                     names. It is tyically served in a martini glass with three coffee beans as garnish.
                                 </p>
-                                <div class="recipe-link-container">
-                                    <a href="https://iba-world.com/espresso-martini/" target="_blank">Recipe</a>
-                                </div>
+                                <a href="https://iba-world.com/espresso-martini/" target="_blank" class="recipe-link"
+                                    class="recipe-link">Recipe</a>
                             </div>
                         </div>
                     </div>
@@ -231,7 +229,8 @@
                 <section class="col" id="learn-long-island">
                     <div class="row row-cols-2">
                         <div class="col learn-page-img-container">
-                            <img src="src/imgs/cards/cocktail-card-long-island.png" class="img-fluid" alt="Long Island Iced Tea" />
+                            <img src="src/imgs/cards/cocktail-card-long-island.png" class="img-fluid"
+                                alt="Long Island Iced Tea" />
                         </div>
                         <div class="col learn-page-info">
                             <h3 class="learn-page-info-heading">Long Island Iced Tea</h3>
@@ -240,15 +239,13 @@
                                     with vodka, tequila, light rum, triple sec, gin, and a splash of cola, which gives
                                     the drink the same amber hue as iced tea. The drink is served in a highball glass
                                     with ice.</p>
-                                <div class="recipe-link-container">
-                                    <a href="https://iba-world.com/spritz/" target="_blank">Recipe</a>
-                                </div>
+                                <a href="https://iba-world.com/spritz/" target="_blank" class="recipe-link">Recipe</a>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
-            
+
             <div class="row row-cols-1 row-cols-xl-2">
                 <!-- Margarita -->
                 <section class="col" id="learn-margarita">
@@ -264,9 +261,8 @@
                                     the rocks), blended with ice (frozen margarita), or without ice (straight up). The
                                     drink is generally served in a stepped-diameter variant of a cocktail glass or
                                     champagne coupe called a margarita glass.</p>
-                                <div class="recipe-link-container">
-                                    <a href="https://iba-world.com/margarita/" target="_blank">Recipe</a>
-                                </div>
+                                <a href="https://iba-world.com/margarita/" target="_blank"
+                                    class="recipe-link">Recipe</a>
                             </div>
                         </div>
                     </div>
@@ -285,9 +281,8 @@
                                     martini has become one of the best-known mixed alcoholic beverages. A popular
                                     variation, the vodka martini, uses vodka instead of gin for the cocktail's base
                                     spirit</p>
-                                <div class="recipe-link-container">
-                                    <a href="https://iba-world.com/dry-martini/" target="_blank">Recipe</a>
-                                </div>
+                                <a href="https://iba-world.com/dry-martini/" target="_blank"
+                                    class="recipe-link">Recipe</a>
                             </div>
                         </div>
                     </div>
@@ -309,9 +304,7 @@
                                     water, and mint. Its combination of sweetness, citrus, and herbaceous mint flavors
                                     is intended to complement the rum, and has made the mojito a popular summer
                                     drink.</p>
-                                <div class="recipe-link-container">
-                                    <a href="https://iba-world.com/mojito/" target="_blank">Recipe</a>
-                                </div>
+                                <a href="https://iba-world.com/mojito/" target="_blank" class="recipe-link">Recipe</a>
                             </div>
                         </div>
                     </div>
@@ -330,9 +323,8 @@
                                     in a Poco Grande glass, it may be garnished with either a pineapple wedge,
                                     maraschino cherry, or both. There are two versions of the drink, both originating in
                                     Puerto Rico. </p>
-                                <div class="recipe-link-container">
-                                    <a href="https://iba-world.com/pina-colada/" target="_blank">Recipe</a>
-                                </div>
+                                <a href="https://iba-world.com/pina-colada/" target="_blank"
+                                    class="recipe-link">Recipe</a>
                             </div>
                         </div>
                     </div>
