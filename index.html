@@ -22,13 +22,13 @@
     <!-- HEADER -->
     <header class="">
 
-        <nav class="navbar navbar-expand-sm h-100 justify-content-between pina-colour1">
+        <nav class="navbar navbar-expand-sm h-100 justify-content-between">
             <ul class="navbar-nav">
                 <li class="navbar-item">
-                    <a href="#home-page" class="nav-link active">Home</a>
+                    <a href="#game-page" class="nav-link" id="game-page-link">Game</a>
                 </li>
-                <li class="navbar-item">
-                    <a href="#game-page" class="nav-link">Game</a>
+                <li>
+                    <a href="#learn-page" class="nav-link" id="learn-page-link">Learn</a>
                 </li>
             </ul>
 
@@ -51,7 +51,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 id="modal-title">How to Play Pair-colada</h2>
+                    <h2 class="modal-title">How to Play Pair-colada</h2>
                     <button type="button" id="how-modal-close" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
@@ -65,17 +65,28 @@
         </div>
     </div>
 
-    <!-- Landing Page -->
-    <main class="d-none">
-        <section id="home-page" class="d-none">
-            <div class="container-fluid bg-primary">
-                <h1>Home Page</h1>
+    <!-- Game Ended Modal -->
+    <div class="modal" id="game-ended-modal" tabindex="-1" role="dialog" aria-labelledBy="modal-title">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" id="game-ended-modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Congratulations!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>You have successfully completed the game!</br>
+                        To play again click the bottom below. <br />
+                        To learn more about these cocktails, click the lean button.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Play Again</button>
+                    <button type="button" class="btn" data-dismiss="modal">Learn</button>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
 
     <!-- Game Page -->
-    <main id="game-page">   
+    <main id="game-page">
         <div class="container d-flex align-items-center">
             <!-- ROW START-->
             <div class="row row-cols-2 row-cols-lg-4 h-100">

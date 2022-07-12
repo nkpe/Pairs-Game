@@ -1,9 +1,7 @@
 body header {
     height: 100px;
-}
-
-.pina-colour1 {
-    background-color: #f7325e;
+    border-bottom: 3px solid;
+    border-color: #f7325e;
 }
 
 a {
@@ -25,10 +23,7 @@ body * {
     font-size: 40px;
 }
 
-<<<<<<< HEAD
-#home-page {
-    min-height: 100vh
-=======
+bootstrap-learn-page
 .modal {
    --bs-modal-border-width: 0px;
 }
@@ -91,7 +86,6 @@ body * {
     border: 2px solid;
     border-color:rgb(20, 20, 20);
     width: 10%
->>>>>>> 8e22669... Progress with flexbox on Learn page
 }
 
 main, .container {
@@ -122,7 +116,6 @@ main, .container {
 
 .card-text {
     display: none;
-    text-align: center;
     
 }
 
@@ -138,6 +131,8 @@ footer {
     padding-left: 5px;
     padding-right: 5px;
     font-size: 15px;
+    border-color: #f7325e !important;
+    border-top: 3px solid;
 }
 
 footer > * {
