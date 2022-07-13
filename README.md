@@ -27,31 +27,41 @@ This informative page allows the user to become more educated about the cocktail
 Recipe links are clearly defined through the use of borders, to provide more info for each cocktail.
 
 # Wireframes
+
+When planning the website I used Figma to create the wireframes. I create 3 pages with 3 different viewport sizes (small Android, iPad Pro, Macbook 16"): 
+
+* How To / Landing Page 
+* Game Page
+* How To Modal
+
+[View wireframes on Figma](https://www.figma.com/file/fXTTNrsOYMdQu9xplX3gvp/Project-2---Pairs-Game-Wireframe-(Copy)?node-id=0%3A1)
+
+During development I decided to simplify the website by removing the dedicated landing page. The game page has become the landing page, with the 'how to' modal visible when the page loads. 
 # Features
 ## All Pages
 
 **Header** - 
+
 **Footer** - 
 
 ## #game-page
 **Modals** - 
 
 ## #learn-page
-**Boostrap Grid** -
+**Bootstrap Grid** -
 
 # Features to be implemented
 * **Countdown timer** - where game times out if the user takes too long to complete the game.
 * **Animations** - flip animations on the cards.
 * **Levels** - easy to hard. Harder levels = more pairs to do. This will allow all the cocktails from the 'learn' page to be played within the game.
-* **Feedback Page** - for the user to send feedback about the website and game, in case of any bugs / issues.
+* **Feedback Page** - for the user to send feedback about the website and game, in case any bugs / issues occur.
 
 # Technologies used
 * **HTML 5** - used to create the basic content of the website.
 * **CSS3** - used to add custom styling to the content of the webpage. 
 * **Bootstrap** - used to create the header and navigation bar and provides modal features. The bootstrap grid provides responsive layout to the website as a whole.
-
+* **Bootstrap Icons** - used to render GitHub icon in footer and the how to button within the header. 
 * **JavaScript** - heavily used for the game logic (randomise card, check for correct pairs and reset the pack).
-* **Font Awesome** - the project used Font Awesome GitHub and LinkedIn fonts for the social media links.
 * **Google Fonts** - used to import a custom font to style the text. 
 * **Git** - this was used during production to efficiently commit and push changes to the GitHub repository so no code could be lost. 
 * **GitHub** - this was used to create and manage a remote repository which holds all commits and pushed from Git. I made uses of the repository branches to separate and track working changes, in case of bugs, before committing new changes to the master branch.
@@ -66,19 +76,35 @@ To validate my HTML code I used [W3C Markup Validation Service](https://validato
 
 To validate my CSS code I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_upload).
 ## Interesting Bugs / Problems
-* **Image Loading Time** - when clicking on the images take a time to load, seeming as though the click was not registered. Image files too large.
+## User Error
+During testing I encountered 'user error' scenarios. These included: 
+
+* 3 cards clicked in quick succession would cause the code to validate and incorrect pair. 
+* Clicking on a card that is already one of a validated pair, this card would still be accepted. 
+* Double clicking a card would cause the code to validate it as a 'pair'. 
+
+To prevent any user error causing incorrect pair validation, I added a class name on the cards, which is removed once they are validated causing the script to no longer accept these after a click event.
 
 # Deployment
-At the start of the development I created a repository on GitHub and cloned a local copy to my machine. To do this I followed these steps:
 ## Start of project
+
+At the start of the development I created a repository on GitHub and cloned a local copy to my machine. To do this I followed these steps:
 
 1. On GitHub webpage I went to 'your repositories' page and clicked 'new' to create a new repository for this project called 'Pairs-Game'.
 2. I went into the new repository, clicking on the green 'code' button, I selected the 'download ZIP' option from the dropdown.
-3. Once the ZIP folder had downloaded, I saved it in a relevant place on my machine and create the  
+3. Once the ZIP folder had downloaded, I saved it in a relevant place on my machine and create the file directory structure. 
 
+## Development
 
-During development I regularly used the git command line tool to create branches, push my code to the remote repo and manage commits. Once a large feature had been added I used GitHub to create pull requests to merge branches into the main branch.
+During development I regularly used the git command line tool to create branches, push my code to the remote repo and manage commits. Once a large code block had been added I used GitHub to create pull requests to merge branches into the main branch. Some commands I used were: 
 
+4. git add . (to add all modified files to the staging area)
+5. git commit -m "" (to commit files with a message)
+6. git push (to upload the code from the local repository to the remote repository)
+7. git cherry-pick (with a commit hash, to copy a commit from one branch to another)
+8. git pull (to bring remote changes into my local repository)
+
+## Deployment  
 The page has been deployed to GitHub pages for hosting - [Pairs Game hosted on GitHub pages](https://nkpe.github.io/Pairs-Game/).
 
 I followed the following steps to deploy to GitHub pages: 
