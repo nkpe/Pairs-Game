@@ -1,9 +1,7 @@
 # Pairs Game - Project Two
 <!-- explains what the project does and the value that it provides to its users. -->
 
-The purpose of this game is to help aspiring mixologists to recognise and name classic cocktails.
-
-
+The purpose of this game is to help aspiring mixologists to recognise and name classic cocktails in a fun environment. It can also be played as fun for those that wish to test their cocktail knowledge. 
 # UX
 
 ## Overview
@@ -13,13 +11,13 @@ Responsiveness for the website, including the game cards, has been seamlessly ac
 
 When the 'game' and 'learn' navigations links are used the page hides the header, ensuring the content of the page is the focus of the browser window.  
 ## Game Page
-Bootstrap provides two modals - one for the 'how to play' instructions and one at the end of the game. These modals show on top of the game, so the user does not lose their place within the game.
+Bootstrap provides two modals - one for the 'how to play' instructions and one upon game completion. These modals show on top of the game, so the user does not lose their place within the game.
 
 The 'how to play' modal appears on page load, to ensure the user understands the game. The colour of this modal has been chosen to ensure separation from the items underneath while retaining readability.
 
 The use of playful colours and shadows ensure the cards stand out on the page. 
 
-Once the user makes all the correct matches, the game ends with a 'congratulations' modal. This modal provides two options for the user - to play again or learn more about the cocktails they have learnt to recognise throughout the game.
+Once the user makes all the correct matches, the game ends with a 'congratulations' modal. This modal provides two options for the user - to play again or learn more details about the cocktails featured in the game.
 
 ## Learn Page
 This informative page allows the user to become more educated about the cocktails they learnt during the game. The use of white space, image and text blocks, headings and bootstrap's grid system work together to make this page easy to read on all devices and browsers.  
@@ -28,7 +26,7 @@ Recipe links are clearly defined through the use of borders, to provide more inf
 
 # Wireframes
 
-When planning the website I used Figma to create the wireframes. I create 3 pages with 3 different viewport sizes (small Android, iPad Pro, Macbook 16"): 
+When planning the website I used Figma to create the wireframes. I created 3 pages with 3 different viewport sizes (small Android, iPad Pro, Macbook 16"): 
 
 * How To / Landing Page 
 * Game Page
@@ -39,22 +37,26 @@ When planning the website I used Figma to create the wireframes. I create 3 page
 During development I decided to simplify the website by removing the dedicated landing page. The game page has become the landing page, with the 'how to' modal visible when the page loads. 
 # Features
 ## All Pages
+**How to icon** -  sits within the header so it is accessible anywhere on the site. 
 
-**Header** - 
+**How to modal** - 
 
-**Footer** - 
+**GuHub link** - 
 
 ## #game-page
-**Modals** - 
+**Game end modal** - 'Play Again' and 'Learn' buttons included on the bootstrap modal component so the user can extend their experience after they have completed the game. 
+
+**Cards** - bootstrap card component used to create each card in the game.
 
 ## #learn-page
 **Bootstrap Grid** -
 
 # Features to be implemented
-* **Countdown timer** - where game times out if the user takes too long to complete the game.
+* **Countdown timer option** - where game times out if the user takes too long to complete the game.
 * **Animations** - flip animations on the cards.
 * **Levels** - easy to hard. Harder levels = more pairs to do. This will allow all the cocktails from the 'learn' page to be played within the game.
 * **Feedback Page** - for the user to send feedback about the website and game, in case any bugs / issues occur.
+* **High Scores** - so the user can see how quickly they have completed the game and increase re-playability.
 
 # Technologies used
 * **HTML 5** - used to create the basic content of the website.
@@ -158,7 +160,7 @@ Learn Page cocktail descriptions taken from the following pages:
 [Pina Colada](https://en.wikipedia.org/wiki/Pi%C3%B1a_colada) 
 ## Media
 ## Styling
-https://www.color-hex.com/color-palette/42 48
+https://www.color-hex.com/color-palette/42-48
 
 ## Acknowledgements 
 * 
