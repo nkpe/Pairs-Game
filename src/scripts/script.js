@@ -5,15 +5,18 @@ const gamePage = document.getElementById("game-page");
 const learnPage = document.getElementById("learn-page");
 const gamePageLink = document.getElementById("game-page-link");
 const learnPageLink = document.getElementById("learn-page-link");
+const learnModalBtn = document.getElementById("end-modal-learn")
 
 let pagesLoad = (e) => {
-    if (document.location.hash === "#learn-page"){
+    if (e.target.hash === "#learn-page"){
+        console.log(e);
         console.log("learn Page active");
         learnPage.style.display = "block";
         gamePage.style.display = "none";
     } else {
         console.log("game Page Active")
         gamePage.style.display = "block";
+        learnPage.style.display = "none";
     };
 };
 

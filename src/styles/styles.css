@@ -113,6 +113,12 @@ main, .container {
     margin-top: 20px;
 }
 
+.recipe-link:hover {
+    box-shadow: 0 0 5px grey;
+    text-decoration: none;
+    color: rgb(20, 20, 20);;
+} 
+
 footer {
     display: flex;
     flex-direction: row;
