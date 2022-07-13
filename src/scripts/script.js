@@ -1,12 +1,36 @@
 "use strict";
 
-// Show how to button
-let howtoButton = document.getElementById("how-btn");
-let howtoButtonClose = document.getElementById("how-modal-close");
-let howtoModal = document.getElementById("how-to-modal");
-console.log(howtoButton);
+
+const gamePage = document.getElementById("game-page");
+const learnPage = document.getElementById("learn-page");
+const gamePageLink = document.getElementById("game-page-link");
+const learnPageLink = document.getElementById("learn-page-link");
+const learnModalBtn = document.getElementById("end-modal-learn")
+
+let pagesLoad = (e) => {
+    if (e.target.hash === "#learn-page"){
+        console.log(e);
+        console.log("learn Page active");
+        learnPage.style.display = "block";
+        gamePage.style.display = "none";
+    } else {
+        console.log("game Page Active")
+        gamePage.style.display = "block";
+        learnPage.style.display = "none";
+    };
+};
+
+gamePageLink.onclick = pagesLoad;
+learnPageLink.onclick = pagesLoad;
 
 
+const howtoButton = document.getElementById("how-btn");
+const howtoButtonClose = document.getElementById("how-modal-close");
+const howtoModal = document.getElementById("how-to-modal");
+const gameEndedModal = document.getElementById("game-ended-modal");
+
+
+// Show how to modal
 let howtoModalShow = (e) => {
     howtoModal.style.display = "block";
 };
@@ -202,7 +226,7 @@ let gameEnd = () => {
     };
 
     if (gameEnded){
-        alert("Congratulations you've completed the game");
+            gameEndedModal.style.display = "block";
     };
 
 };

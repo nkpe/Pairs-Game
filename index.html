@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
 
     <title>Pairs Game</title>
 </head>
@@ -22,19 +22,18 @@
     <!-- HEADER -->
     <header class="">
 
-        <nav class="navbar navbar-expand-sm h-100 justify-content-between pina-colour1">
+        <nav class="navbar navbar-expand-sm h-100 justify-content-between">
             <ul class="navbar-nav">
                 <li class="navbar-item">
-                    <a href="#home-page" class="nav-link active">Home</a>
+                    <a href="#game-page" class="nav-link" id="game-page-link">Game</a>
                 </li>
-                <li class="navbar-item">
-                    <a href="#game-page" class="nav-link">Game</a>
+                <li>
+                    <a href="#learn-page" class="nav-link" id="learn-page-link">Learn</a>
                 </li>
             </ul>
 
-            <div id="header-branding"
-                class="navbar-brand h-100 d-inline-flex flex-row align-items-center flex-nowrap p-0 m-0">
-                <img src="src/imgs/cocktail-logo.svg" class="h-100" />
+            <div id="header-branding" class="navbar-brand h-100 d-inline-flex flex-row align-items-center flex-nowrap">
+                <img src="src/imgs/cocktail-logo.svg" class="h-100" alt="Logo for Pair-colada" />
                 <h1>Pair-colada</h1>
             </div>
 
@@ -46,36 +45,8 @@
 
     </header>
 
-    <!-- How to Modal -->
-    <div class="modal" id="how-to-modal" tabindex="-1" role="dialog" aria-labelledBy="modal-title">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 id="modal-title">How to Play Pair-colada</h2>
-                    <button type="button" id="how-modal-close" class="btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>This game is designed to help learn and test your knowledge of classic cocktails.</p>
-                    <h4>How to Play:</h4>
-                    <p>Select a pair and if it turns faded then it is a pair. If it turns back over then it is
-                        incorrect.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Landing Page -->
-    <main class="d-none">
-        <section id="home-page" class="d-none">
-            <div class="container-fluid bg-primary">
-                <h1>Home Page</h1>
-            </div>
-        </section>
-    </main>
-
     <!-- Game Page -->
-    <main id="game-page">   
+    <main id="game-page">
         <div class="container d-flex align-items-center">
             <!-- ROW START-->
             <div class="row row-cols-2 row-cols-lg-4 h-100">
@@ -149,21 +120,235 @@
         </div>
     </main>
 
-    <footer class="pina-colour1">
-            <a class="github-link" href="https://github.com/nkpe/Pairs-Game" target=" _blank">
-                <img class="github-icon" src="src/imgs/github.svg" alt="GitHub Icon"/>
-                <div>Source Code</div>
-            </a>
-            <div id="copyright">&copy; Naomi Pearse 2022</div>
-            
-        </ul>
+    <!-- How to Modal -->
+    <div class="modal" id="how-to-modal" tabindex="-1" role="dialog" aria-labelledBy="modal-title">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">How to Play Pair-colada</h2>
+                    <button type="button" id="how-modal-close" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This game is designed to help learn and test your knowledge of classic cocktails.</p>
+                    <h4>How to Play:</h4>
+                    <p>Select a pair and if it turns faded then it is a pair. If it turns back over then it is
+                        incorrect.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Game Ended Modal -->
+    <div class="modal" id="game-ended-modal" tabindex="-1" role="dialog" aria-labelledBy="modal-title">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" id="game-ended-modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Congratulations!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>You have successfully completed the game!<br />
+                        To play again click the bottom below. <br />
+                        To learn more about these cocktails, click the learn button.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="end-modal-play-again" class="btn" data-dismiss="modal">Play Again</button>
+                    <button type="button" id="end-modal-learn" class="btn" data-dismiss="modal">Learn</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Learn Page -->
+    <main id="learn-page" style="display: none;">
+        <h2 id="learn-page-heading">Learn about the Cocktails</h2>
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-xl-2">
+                <!-- Aperol Spritz -->
+                <section class="col" id="learn-aperol">
+                    <div class="row row-cols-2">
+                        <div class="col learn-page-img-container">
+                            <img src="src/imgs/cards/cocktail-card-aperol-spritz.png" class="img-fluid"
+                                alt="Aperol Spritz" />
+                        </div>
+                        <div class="col learn-page-info">
+                            <h3 class="learn-page-info-heading">Aperol Spritz</h3>
+                            <div class="learn-page-info-body">
+                                <p>The Spritz, more commonly known as the Aperol Spritz, is an Italian wine-based
+                                    cocktail, commonly served as an aperitif in Northeast Italy. It consists of
+                                    prosecco, digestive bitters and soda water. </p>
+                                <a href="https://iba-world.com/spritz/" target="_blank" class="recipe-link">Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Cosmopolitan -->
+                <section class="col" id="learn-cosmopolitan">
+                    <div class="row row-cols-2">
+                        <div class="col learn-page-img-container">
+                            <img src="src/imgs/cards/cocktail-card-cosmopolitan.png" class="img-fluid"
+                                alt="Cosmopolitan" />
+                        </div>
+                        <div class="col learn-page-info">
+                            <h3 class="learn-page-info-heading">Cosmopolitan</h3>
+                            <div class="learn-page-info-body">
+                                <p>A cosmopolitan, or informally a cosmo, is a cocktail made with vodka, triple sec,
+                                    cranberry juice, and freshly squeezed or sweetened lime juice. Its is typically
+                                    served in a martini glass with a lime slice or orange peel garnish.</p>
+                                <a href="https://iba-world.com/cosmopolitan/" target="_blank"
+                                    class="recipe-link">Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="row row-cols-1 row-cols-xl-2">
+                <!-- Espresso Martini -->
+                <section class="col" id="learn-espresso-martini">
+                    <div class="row row-cols-2">
+                        <div class="col learn-page-img-container">
+                            <img src="src/imgs/cards/cocktail-card-espresso-martini.png" class="img-fluid"
+                                alt="Espresso Martini" />
+                        </div>
+                        <div class="col learn-page-info">
+                            <h3 class="learn-page-info-heading">Espresso Martini</h3>
+                            <div class="learn-page-info-body">
+                                <p> The espresso martini is a cold caffeinated alcoholic drink made with espresso,
+                                    coffee liqueur, and vodka. It is not a true martini as it contains neither gin nor
+                                    vermouth, but is one of many drinks that incorporate the term martini into their
+                                    names. It is tyically served in a martini glass with three coffee beans as garnish.
+                                </p>
+                                <a href="https://iba-world.com/espresso-martini/" target="_blank" class="recipe-link"
+                                    class="recipe-link">Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Long Island Iced Tea -->
+                <section class="col" id="learn-long-island">
+                    <div class="row row-cols-2">
+                        <div class="col learn-page-img-container">
+                            <img src="src/imgs/cards/cocktail-card-long-island.png" class="img-fluid"
+                                alt="Long Island Iced Tea" />
+                        </div>
+                        <div class="col learn-page-info">
+                            <h3 class="learn-page-info-heading">Long Island Iced Tea</h3>
+                            <div class="learn-page-info-body">
+                                <p>A Long Island iced tea or Long Island ice tea is a type of cocktail typically made
+                                    with vodka, tequila, light rum, triple sec, gin, and a splash of cola, which gives
+                                    the drink the same amber hue as iced tea. The drink is served in a highball glass
+                                    with ice.</p>
+                                <a href="https://iba-world.com/spritz/" target="_blank" class="recipe-link">Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="row row-cols-1 row-cols-xl-2">
+                <!-- Margarita -->
+                <section class="col" id="learn-margarita">
+                    <div class="row row-cols-2">
+                        <div class="col learn-page-img-container">
+                            <img src="src/imgs/cards/cocktail-card-margarita.png" class="img-fluid" alt="Margarita" />
+                        </div>
+                        <div class="col learn-page-info">
+                            <h3 class="learn-page-info-heading">Margarita</h3>
+                            <div class="learn-page-info-body">
+                                <p>A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often
+                                    served with salt on the rim of the glass. The drink is served shaken with ice (on
+                                    the rocks), blended with ice (frozen margarita), or without ice (straight up). The
+                                    drink is generally served in a stepped-diameter variant of a cocktail glass or
+                                    champagne coupe called a margarita glass.</p>
+                                <a href="https://iba-world.com/margarita/" target="_blank"
+                                    class="recipe-link">Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Martini -->
+                <section class="col" id="learn-martini">
+                    <div class="row row-cols-2">
+                        <div class="col learn-page-img-container">
+                            <img src="src/imgs/cards/cocktail-card-martini.png" class="img-fluid" alt="Martini" />
+                        </div>
+                        <div class="col learn-page-info">
+                            <h3 class="learn-page-info-heading">Dry Martini</h3>
+                            <div class="learn-page-info-body">
+                                <p>The dry martini, more commonly known just as a martini is a cocktail made with gin
+                                    and vermouth, and garnished with an olive or a lemon twist. Over the years, the
+                                    martini has become one of the best-known mixed alcoholic beverages. A popular
+                                    variation, the vodka martini, uses vodka instead of gin for the cocktail's base
+                                    spirit</p>
+                                <a href="https://iba-world.com/dry-martini/" target="_blank"
+                                    class="recipe-link">Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="row row-cols-1 row-cols-xl-2">
+                <!-- Mojito -->
+                <section class="col" id="learn-mojito">
+                    <div class="row row-cols-2">
+                        <div class="col learn-page-img-container">
+                            <img src="src/imgs/cards/cocktail-card-mojito.png" class="img-fluid" alt="Mojito" />
+                        </div>
+                        <div class="col learn-page-info">
+                            <h3 class="learn-page-info-heading">Mojito</h3>
+                            <div class="learn-page-info-body">
+                                <p>Mojito is a traditional Cuban highball. The cocktail often consists of five
+                                    ingredients: white rum, sugar (traditionally sugar cane juice), lime juice, soda
+                                    water, and mint. Its combination of sweetness, citrus, and herbaceous mint flavors
+                                    is intended to complement the rum, and has made the mojito a popular summer
+                                    drink.</p>
+                                <a href="https://iba-world.com/mojito/" target="_blank" class="recipe-link">Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Pina Colada -->
+                <section class="col" id="learn-pina-colada">
+                    <div class="row row-cols-2">
+                        <div class="col learn-page-img-container">
+                            <img src="src/imgs/cards/cocktail-card-pina-colada.png" class="img-fluid" alt="Pina Colada">
+                        </div>
+                        <div class="col learn-page-info">
+                            <h3 class="learn-page-info-heading">Pina Colada</h3>
+                            <div class="learn-page-info-body">
+                                <p>The pina colada is a cocktail made with rum, cream of coconut or coconut milk, and
+                                    pineapple juice, usually served either blended or shaken with ice. Typicall served
+                                    in a Poco Grande glass, it may be garnished with either a pineapple wedge,
+                                    maraschino cherry, or both. There are two versions of the drink, both originating in
+                                    Puerto Rico. </p>
+                                <a href="https://iba-world.com/pina-colada/" target="_blank"
+                                    class="recipe-link">Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+        <a class="github-link" href="https://github.com/nkpe/Pairs-Game" target=" _blank">
+            <img class="github-icon" src="src/imgs/github.svg" alt="GitHub Icon" />
+            <div>Source Code</div>
+        </a>
+        <div id="copyright">&copy; Naomi Pearse 2022</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="src/scripts/script.js"></script>
 </body>
 
 </html>
