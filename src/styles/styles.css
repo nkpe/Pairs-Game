@@ -56,6 +56,14 @@ header nav span {
     border-color: rgb(20, 20, 20);
 }
 
+.modal-footer .btn {
+    padding: 0px;
+}
+
+.modal-footer .btn > *{
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+}
+
 /* Game Page */
 
 main, .container {
