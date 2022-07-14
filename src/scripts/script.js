@@ -1,33 +1,68 @@
 "use strict";
 
-
+// Page & Link Variables
 const gamePage = document.getElementById("game-page");
 const learnPage = document.getElementById("learn-page");
-const gamePageLink = document.getElementById("game-page-link");
-const learnPageLink = document.getElementById("learn-page-link");
-const learnModalBtn = document.getElementById("end-modal-learn")
+const gamePageLink = document.getElementsByClassName("game-page-link");
+const learnPageLink = document.getElementsByClassName("learn-page-link");
+const gameNavLink = document.getElementById("game-nav");
+const learnNavLink = document.getElementById("learn-nav");
+
+// Modal Variables
+const howtoButton = document.getElementById("how-btn");
+const howtoButtonClose = document.getElementById("how-modal-close");
+const howtoModal = document.getElementById("how-to-modal");
+const gameEndedModal = document.getElementById("game-ended-modal");
+
+
+let allModalHide = () => {
+    howtoModal.style.display = "none";
+    gameEndedModal.style.display = "none";
+};
+
+let gameReset = () => {
+    for (let i=0; i<cards.length; i++){
+        cards[i].src = cardBackImgSrc;
+        cards[i].style.opacity = "1";
+        cards[i].classList.add("card-img");
+    }
+};
+
+let navLinkStatus = () => {
+    console.log("navLinkStatus working");
+    gameNavLink.classList.toggle("active");
+    learnNavLink.classList.toggle("active");
+}
 
 let pagesLoad = (e) => {
+    console.log(e);
     if (e.target.hash === "#learn-page"){
         console.log(e);
         console.log("learn Page active");
         learnPage.style.display = "block";
         gamePage.style.display = "none";
+        navLinkStatus();
+        allModalHide();
     } else {
         console.log("game Page Active")
         gamePage.style.display = "block";
         learnPage.style.display = "none";
+        navLinkStatus();
+        allModalHide();
+        gameReset();
     };
 };
 
-gamePageLink.onclick = pagesLoad;
-learnPageLink.onclick = pagesLoad;
+for (let i=0; i<gamePageLink.length; i++){
+    gamePageLink[i].addEventListener('click' , pagesLoad)
+};
+
+for (let i=0; i<learnPageLink.length; i++){
+    learnPageLink[i].addEventListener('click' , pagesLoad)
+};
 
 
-const howtoButton = document.getElementById("how-btn");
-const howtoButtonClose = document.getElementById("how-modal-close");
-const howtoModal = document.getElementById("how-to-modal");
-const gameEndedModal = document.getElementById("game-ended-modal");
+
 
 
 // Show how to modal
@@ -59,7 +94,8 @@ const espressoMartiniImgSrc = "src/imgs/cards/cocktail-card-espresso-martini.png
 const espressoMartiniTextSrc = "src/imgs/cards-text/cocktail-cards-text-espresso-martini.png";
 const pinaColadaImgSrc = "src/imgs/cards/cocktail-card-pina-colada.png";
 const pinaColadaTextSrc = "src/imgs/cards-text/cocktail-cards-text-pina-colada.png";
-const cardBackImgSrc = "src/imgs/cards/cocktail-card-back.png"
+const cardBackImgSrc = "src/imgs/cards/cocktail-card-back.png";
+
 //Array to store card content
 let cardContentArray = [];
 

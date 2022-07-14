@@ -26,10 +26,10 @@
         <nav class="navbar navbar-expand-sm h-100 justify-content-between">
             <ul class="navbar-nav">
                 <li class="navbar-item">
-                    <a href="#game-page" class="nav-link" id="game-page-link">Game</a>
+                    <a href="#game-page" class="nav-link game-page-link active" id="game-nav">Game</a>
                 </li>
                 <li>
-                    <a href="#learn-page" class="nav-link" id="learn-page-link">Learn</a>
+                    <a href="#learn-page" class="nav-link learn-page-link" id="learn-nav">Learn</a>
                 </li>
             </ul>
 
@@ -153,8 +153,10 @@
                         To learn more about these cocktails, click the learn button.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="end-modal-play-again" class="btn" data-dismiss="modal">Play Again</button>
-                    <button type="button" id="end-modal-learn" class="btn" data-dismiss="modal">Learn</button>
+                    <button type="button" id="end-modal-play-again" class="btn" data-dismiss="modal"><a href="#game-page" class="game-page-link">Play Again</a></button>
+                   
+                        <button type="button" id="end-modal-learn" class="btn" data-dismiss="modal"> <a href="#learn-page" class="learn-page-link">Learn</a></button>
+                    </a>
                 </div>
             </div>
         </div>
