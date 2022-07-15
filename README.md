@@ -154,12 +154,19 @@ http://alistapart.com/article/creating-intrinsic-ratios-for-video/ - Sizing rati
 Learn Page cocktail descriptions taken from the following pages:
 
 [Aperol Spritz](https://en.wikipedia.org/wiki/Spritz_Veneziano)
+
 [B-52](https://en.wikipedia.org/wiki/B-52_(cocktail))
+
 [Cosmopolitan](https://en.wikipedia.org/wiki/Cosmopolitan_(cocktail))
+
 [Espresso Martini](https://en.wikipedia.org/wiki/Espresso_martini)
+
 [Long Island Iced Tea](https://en.wikipedia.org/wiki/Long_Island_iced_tea)
+
 [Margarita](https://en.wikipedia.org/wiki/Margarita)
+
 [Mojito](https://en.wikipedia.org/wiki/Mojito)
+
 [Pina Colada](https://en.wikipedia.org/wiki/Pi%C3%B1a_colada) 
 
 ## **Media**
