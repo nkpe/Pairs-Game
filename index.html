@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <!-- Lines 7 & 8 & bootstrap script -  getbootstrap.com -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -18,10 +19,10 @@
     <title>Pairs Game</title>
 </head>
 
-<body class="">
+<body>
 
     <!-- HEADER -->
-    <header class="">
+    <header>
 
         <nav class="navbar navbar-expand-sm h-100 justify-content-between">
             <ul class="navbar-nav">
@@ -33,14 +34,15 @@
                 </li>
             </ul>
 
-            <div id="header-branding" class="navbar-brand h-100 d-inline-flex flex-row align-items-center flex-nowrap">
+            <div id="header-branding" class="h-100 d-inline-flex flex-row align-items-center flex-nowrap">
                 <img src="src/imgs/cocktail-logo.svg" class="h-100" alt="Logo for Pair-colada" />
                 <h1>Pair-colada</h1>
             </div>
 
             <span id="how-btn-container" class="navbar-item h-100">
-                <a href="#" id="how-btn" class="nav-link h-100 d-inline-flex align-items-center"><i
-                        class="bi bi-patch-question"></i></a>
+                <a href="#" id="how-btn" class="nav-link h-100 d-inline-flex align-items-center">
+                    <i class="bi bi-patch-question"></i>
+                </a>
             </span>
         </nav>
 
@@ -153,10 +155,8 @@
                         To learn more about these cocktails, click the learn button.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="end-modal-play-again" class="btn" data-dismiss="modal"><a href="#game-page" class="game-page-link">Play Again</a></button>
-                   
-                        <button type="button" id="end-modal-learn" class="btn" data-dismiss="modal"> <a href="#learn-page" class="learn-page-link">Learn</a></button>
-                    </a>
+                    <a href="#game-page" class="modal-link game-page-link">Play Again</a>
+                    <a href="#learn-page" class="modal-link learn-page-link">Learn</a>
                 </div>
             </div>
         </div>
@@ -222,7 +222,7 @@
                                     vermouth, but is one of many drinks that incorporate the term martini into their
                                     names. It is typically served in a martini glass with three coffee beans as garnish.
                                 </p>
-                                <a href="https://iba-world.com/espresso-martini/" target="_blank" class="recipe-link"
+                                <a href="https://iba-world.com/espresso-martini/" target="_blank"
                                     class="recipe-link">Recipe</a>
                             </div>
                         </div>
@@ -355,5 +355,3 @@
 </body>
 
 </html>
-
-<!-- ONE ROW WITH IMAGES IN COLUMNS -->

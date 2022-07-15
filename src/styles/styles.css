@@ -22,10 +22,6 @@ header {
     border-color: #f7325e;
 }
 
-header nav #header-branding {
-    margin-right: 72px;
-}
-
 header nav #header-branding h1 {
     margin-left: 20px;
 }
@@ -56,14 +52,20 @@ header nav span {
     border-color: rgb(20, 20, 20);
 }
 
-.modal-footer .btn {
-    padding: 0px;
+.modal-footer .modal-link {
+    text-decoration: none;
+    border: 2px solid;
+    border-color: rgb(20, 20, 20);
+    width: fit-content;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-.modal-footer .btn > *{
-    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
-}
-
+.modal-link:hover {
+    box-shadow: 0 0 5px grey;
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+} 
 /* Game Page */
 
 main, .container {
@@ -124,7 +126,7 @@ main, .container {
 .recipe-link:hover {
     box-shadow: 0 0 5px grey;
     text-decoration: none;
-    color: rgb(20, 20, 20);;
+    color: rgb(20, 20, 20);
 } 
 
 footer {
@@ -165,3 +167,11 @@ footer .github-icon {
 footer #copyright {
     margin-left: auto;
 }
+
+@media screen and (min-width: 500px){
+    header nav span {
+        display: flex;
+        width: 108px;
+        justify-content: flex-end;
+    }
+};
