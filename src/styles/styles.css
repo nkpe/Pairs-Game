@@ -123,7 +123,7 @@ main, .container {
 
 .learn-page-info-body p {
     margin-bottom: 2rem;
-}
+}   
 
 .recipe-link {
     border: 2px solid;
@@ -183,5 +183,11 @@ footer #copyright {
         display: flex;
         width: 108px;
         justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 567px){
+    .container-fluid {
+        padding-right: 30px;
     }
 };
