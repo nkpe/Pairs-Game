@@ -17,16 +17,26 @@ body * {
 
 /* Header */
 header {
+    display: flex;
+    justify-content: space-between;
     height: 100px;
     border-bottom: 3px solid;
     border-color: #f7325e;
 }
 
-header nav #header-branding h1 {
+header nav {
+    display: inline-block;
+}
+
+header nav button {
+    border: none !important;
+}
+
+header #header-branding h1 {
     margin-left: 20px;
 }
 
-header nav span {
+header span {
     margin-right: 8px;
 }
 

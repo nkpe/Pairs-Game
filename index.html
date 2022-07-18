@@ -25,26 +25,35 @@
     <header>
 
         <nav class="navbar navbar-expand-sm h-100 justify-content-between">
-            <ul class="navbar-nav">
-                <li class="navbar-item">
-                    <a href="#game-page" class="nav-link game-page-link active" id="game-nav">Game</a>
-                </li>
-                <li>
-                    <a href="#learn-page" class="nav-link learn-page-link" id="learn-nav">Learn</a>
-                </li>
-            </ul>
-
-            <div id="header-branding" class="h-100 d-inline-flex flex-row align-items-center flex-nowrap">
-                <img src="src/imgs/cocktail-logo.svg" class="h-100" alt="Logo for Pair-colada" />
-                <h1>Pair-colada</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Pair-colada</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                <ul class="navbar-nav" me-auto mb-2 mb-lg-0>
+                    <li class="navbar-item">
+                        <a href="#game-page" class="nav-link game-page-link active" id="game-nav">Game</a>
+                    </li>
+                    <li>
+                        <a href="#learn-page" class="nav-link learn-page-link" id="learn-nav">Learn</a>
+                    </li>
+                </ul>
             </div>
-
-            <span id="how-btn-container" class="navbar-item h-100">
-                <a href="#" id="how-btn" class="nav-link h-100 d-inline-flex align-items-center">
-                    <i class="bi bi-patch-question"></i>
-                </a>
-            </span>
         </nav>
+        <div id="header-branding" class="h-100 d-inline-flex flex-row align-items-center flex-nowrap">
+            <img src="src/imgs/cocktail-logo.svg" class="h-75" alt="Logo for Pair-colada" />
+            <h1>Pair-colada</h1>
+        </div>
+
+        <span id="how-btn-container" class="navbar-item h-100">
+            <a href="#" id="how-btn" class="nav-link h-100 d-inline-flex align-items-center">
+                <i class="bi bi-patch-question"></i>
+            </a>
+        </span>
 
     </header>
 
@@ -352,6 +361,7 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
     <script src="src/scripts/script.js"></script>
+
 </body>
 
 </html>
