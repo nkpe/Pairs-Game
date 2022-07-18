@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <!-- Lines 7 & 8 & bootstrap script -  getbootstrap.com -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
@@ -20,10 +18,8 @@
 </head>
 
 <body>
-
     <!-- HEADER -->
     <header>
-
         <nav class="navbar navbar-expand-sm h-100 justify-content-between">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
@@ -36,7 +32,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav" me-auto mb-2 mb-lg-0>
+                    <ul class="navbar-nav">
                         <li class="navbar-item">
                             <a href="#game-page" class="nav-link game-page-link active" id="game-nav"
                                 data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">Game</a>
@@ -138,30 +134,31 @@
     </main>
 
     <!-- How to Modal -->
-    <div class="modal" id="how-to-modal" tabindex="-1" role="dialog" aria-labelledBy="modal-title">
+    <div class="modal" id="how-to-modal" tabindex="-1" role="dialog" aria-labelledBy="how-to-title">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title">How to Play Pair-colada</h2>
+                    <h2 id="how-to-title" class="modal-title">How to Play Pair-colada</h2>
                     <button type="button" id="how-modal-close" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p>This game is designed to help learn and test your knowledge of classic cocktails.</p>
                     <h4>How to Play:</h4>
-                    <p>Select a pair and if it turns faded then it is a pair. If it turns back over then it is
-                        incorrect.</p>
+                    <p>The aim is to match the cocktails with their correct names. <br />
+                    Select a pair of cards and if it turns faded then it is a correct match. If it turns back over then it is
+                    incorrect. Once all the cards are correctly matched you will get a pop up.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Game Ended Modal -->
-    <div class="modal" id="game-ended-modal" tabindex="-1" role="dialog" aria-labelledBy="modal-title">
+    <div class="modal" id="game-ended-modal" tabindex="-1" role="dialog" aria-labelledBy="game-ended-title">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content" id="game-ended-modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title">Congratulations!</h2>
+                    <h2 id="game-ended-title" class="modal-title">Congratulations!</h2>
                 </div>
                 <div class="modal-body">
                     <p>You have successfully completed the game!<br />
@@ -177,7 +174,7 @@
     </div>
 
     <!-- Learn Page -->
-    <main id="learn-page" style="display: none;">
+    <main id="learn-page" hidden>
         <h2 id="learn-page-heading">Learn about the Cocktails</h2>
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-xl-2">
