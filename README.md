@@ -81,7 +81,6 @@ To test the Javascript, I regularly used the 'console.log()' method to print mes
 To validate my HTML code I used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_upload).
 
 To validate my CSS code I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_upload).
-## **Interesting Bugs / Problems**
 ## **Usability**
 During testing I encountered some usability and user error scenarios that would prevent the game functioning correctly. These included: 
 
