@@ -25,23 +25,28 @@
     <header>
 
         <nav class="navbar navbar-expand-sm h-100 justify-content-between">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Pair-colada</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Pair-colada</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                <ul class="navbar-nav" me-auto mb-2 mb-lg-0>
-                    <li class="navbar-item">
-                        <a href="#game-page" class="nav-link game-page-link active" id="game-nav">Game</a>
-                    </li>
-                    <li>
-                        <a href="#learn-page" class="nav-link learn-page-link" id="learn-nav">Learn</a>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav" me-auto mb-2 mb-lg-0>
+                        <li class="navbar-item">
+                            <a href="#game-page" class="nav-link game-page-link active" id="game-nav"
+                                data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">Game</a>
+                        </li>
+                        <li>
+                            <a href="#learn-page" class="nav-link learn-page-link" id="learn-nav"
+                                data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">Learn</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div id="header-branding" class="h-100 d-inline-flex flex-row align-items-center flex-nowrap">

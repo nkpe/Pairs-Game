@@ -127,31 +127,20 @@ The code can be run locally by downloading from my GitHub repository following t
 
 
 # **Credits**
+Some assistance with creating array's came from a [Stackoverflow post](https://stackoverflow.com/questions/19526456/get-all-instances-of-class-in-javascript)
 
-https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceWith
-https://stackoverflow.com/questions/19526456/get-all-instances-of-class-in-javascript
+To get the shuffleCardContents function on lines I used [CodeBubb](https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj)
 
-https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html
 
-<!-- random function -->
-
-https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
-<!-- box shadow all around  -->
 https://stackoverflow.com/questions/6821295/add-css-box-shadow-around-the-whole-div 
 
 https://stackoverflow.com/questions/7859336/why-are-my-css3-media-queries-not-working-on-mobile-devices
 
 ## **Content**
-
-https://getbootstrap.com/docs/5.0/components/card/ - implementing card layout on game page
-
-https://getbootstrap.com/docs/5.2/components/modal/#how-it-works
+For the Boostrap classes and components I used the [Bootstrap documentation](https://getbootstrap.com/docs/).
 
 
-http://alistapart.com/article/creating-intrinsic-ratios-for-video/ - Sizing ratio for the cards on game page.
-
-
-Learn Page cocktail descriptions taken from the following pages:
+Learn Page cocktail descriptions were copied from the following pages:
 
 [Aperol Spritz](https://en.wikipedia.org/wiki/Spritz_Veneziano)
 
@@ -170,8 +159,8 @@ Learn Page cocktail descriptions taken from the following pages:
 [Pina Colada](https://en.wikipedia.org/wiki/Pi%C3%B1a_colada) 
 
 ## **Media**
-## **Styling**
-https://www.color-hex.com/color-palette/42-48
+
+The illustrations for the cards and logo were taken from [Adobe Stock](https://stock.adobe.com/uk/images/cocktail-set-collection-of-alcohol-drink-in-glass/252841390) and edited by myself. 
 
 ## **Acknowledgements**
 * 
