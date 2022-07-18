@@ -1,15 +1,14 @@
 # **Pairs Game - Project Two**
-<!-- explains what the project does and the value that it provides to its users. -->
-
 The purpose of this game is to help aspiring mixologists to recognise and name classic cocktails in a fun environment. It can also be played as fun for those that wish to test their cocktail knowledge. 
 # **UX**
-
 ## **Overview**
 The UX has a clean, minimal and contemporary design, allowing the user to focus on the page content. The header and footer are defined using a simple line, while maintaining a white background to keep the flow of the design. 
 
 Responsiveness for the website, including the game cards, has been seamlessly achieved through the use of bootstrap's grid system.
 
 When the 'game' and 'learn' navigations links are used the page hides the header, ensuring the content of the page is the focus of the browser window.  
+
+Use of Javascript to highlight which page the user is on by making the relevant navigation link bold.
 ## **Game Page**
 Bootstrap provides two modals - one for the 'how to play' instructions and one upon game completion. These modals show on top of the game, so the user does not lose their place within the game.
 
@@ -25,7 +24,6 @@ This informative page allows the user to become more educated about the cocktail
 Recipe links are clearly defined through the use of borders, to provide more info for each cocktail.
 
 # **Wireframes**
-
 When planning the website I used Figma to create the wireframes. I created 3 pages with 3 different viewport sizes (small Android, iPad Pro, Macbook 16"): 
 
 * How To / Landing Page 
@@ -69,9 +67,15 @@ During development I decided to simplify the website by removing the dedicated l
 * **GitHub** - this was used to create and manage a remote repository which holds all commits and pushed from Git. I made uses of the repository branches to separate and track working changes, in case of bugs, before committing new changes to the master branch.
 
 # **Testing**
-While building the website I regularly used Google Chrome, FireFox, Safari and Edge browsers to render my code, checking for any broken code and incompatibility. One example I found that Firefox and Safari rendered the select tag in HTML with a grey background giving the form fields inconsistent styling. I fixed this by adding a class of form-field-background to each form field with a specified colour. 
+While building the website I regularly used Google Chrome, FireFox, Safari and Edge browsers to render my code, checking for any broken code and incompatibility.
 
-I used the Developer Tools built into Chrome to test responsiveness of the website, by selecting different devices. When conducting these tests I found the responsiveness of the home page photo and the form fields needed to be handled with media queries as they had specific break points.  
+I used the Developer Tools built into Chrome to test responsiveness of the website, by selecting different devices.
+
+To test the Javascript, I regularly used the 'console.log()' method to print messages to the console. I used this method to test for the following: 
+
+* Whether a function itself was being executed.
+* To locate where the code would break / stop running due to an error. 
+* To print javascript objects to the console, in order to check their properties.
 
 ## **HTML & CSS Validator**
 To validate my HTML code I used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_upload).
@@ -89,7 +93,6 @@ To prevent incorrect pair validation, I added a class name on the cards, which i
 
 # **Deployment**
 ## **Start of project**
-
 At the start of the development I created a repository on GitHub and cloned a local copy to my machine. To do this I followed these steps:
 
 1. On GitHub webpage I went to 'your repositories' page and clicked 'new' to create a new repository for this project called 'Pairs-Game'.
@@ -97,7 +100,6 @@ At the start of the development I created a repository on GitHub and cloned a lo
 3. Once the ZIP folder had downloaded, I saved it in a relevant place on my machine and create the file directory structure. 
 
 ## **Development**
-
 During development I regularly used the git command line tool to create branches, push my code to the remote repo and manage commits. Once a large code block had been added I used GitHub to create pull requests to merge branches into the main branch. Some commands I used were: 
 
 4. git add . (to add all modified files to the staging area)
@@ -127,31 +129,18 @@ The code can be run locally by downloading from my GitHub repository following t
 
 
 # **Credits**
+## **Code**
+Some assistance with creating array's came from a this [Stackoverflow post](https://stackoverflow.com/questions/19526456/get-all-instances-of-class-in-javascript)
 
-https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceWith
-https://stackoverflow.com/questions/19526456/get-all-instances-of-class-in-javascript
+To get the shuffleCardContents function on lines I used [CodeBubb](https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj)
 
-https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html
-
-<!-- random function -->
-
-https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
-<!-- box shadow all around  -->
-https://stackoverflow.com/questions/6821295/add-css-box-shadow-around-the-whole-div 
-
-https://stackoverflow.com/questions/7859336/why-are-my-css3-media-queries-not-working-on-mobile-devices
+Help with adding shadows to the cards came from this [Stackoverflow post](https://stackoverflow.com/questions/6821295/add-css-box-shadow-around-the-whole-div)
 
 ## **Content**
-
-https://getbootstrap.com/docs/5.0/components/card/ - implementing card layout on game page
-
-https://getbootstrap.com/docs/5.2/components/modal/#how-it-works
+For the Boostrap classes and components I used the [Bootstrap documentation](https://getbootstrap.com/docs/).
 
 
-http://alistapart.com/article/creating-intrinsic-ratios-for-video/ - Sizing ratio for the cards on game page.
-
-
-Learn Page cocktail descriptions taken from the following pages:
+Learn Page cocktail descriptions were copied from the following pages:
 
 [Aperol Spritz](https://en.wikipedia.org/wiki/Spritz_Veneziano)
 
@@ -170,8 +159,9 @@ Learn Page cocktail descriptions taken from the following pages:
 [Pina Colada](https://en.wikipedia.org/wiki/Pi%C3%B1a_colada) 
 
 ## **Media**
-## **Styling**
-https://www.color-hex.com/color-palette/42-48
+
+The illustrations for the cards and logo were taken from [Adobe Stock](https://stock.adobe.com/uk/images/cocktail-set-collection-of-alcohol-drink-in-glass/252841390) and edited by myself. 
 
 ## **Acknowledgements**
-* 
+* Thank you to my boyfriend who helped direct me by providing styling feedback.
+* Thank you to my mentor, Scott Nnaghor, for the feedback with my code readability and accuracy.

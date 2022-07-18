@@ -8,7 +8,6 @@ li {
 }
 
 body * {
-    /* color: #fef8cf; */
     font-family: 'Poiret One', cursive;
     font-weight: 800;
     color: rgb(20, 20, 20);
@@ -76,8 +75,8 @@ header span {
     text-decoration: none;
     color: rgb(20, 20, 20);
 } 
-/* Game Page */
 
+/* Game Page */
 main, .container {
     min-height: 100vh;
     padding-top: calc(var(--bs-gutter-x) * .5);
@@ -123,7 +122,7 @@ main, .container {
 
 .learn-page-info-body p {
     margin-bottom: 2rem;
-}
+}   
 
 .recipe-link {
     border: 2px solid;
@@ -178,10 +177,17 @@ footer #copyright {
     margin-left: auto;
 }
 
+/* Responsive */
 @media screen and (min-width: 500px){
     header nav span {
         display: flex;
         width: 108px;
         justify-content: flex-end;
     }
-};
+}
+
+@media screen and (max-width: 567px){
+    .container-fluid {
+        padding-right: 30px;
+    }
+}
