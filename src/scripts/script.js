@@ -24,7 +24,7 @@ let gameReset = () => {
     for (let i=0; i<cards.length; i++){
         cards[i].src = cardBackImgSrc;
         cards[i].style.opacity = "1";
-        cards[i].classList.add("card-img");
+        cards[i].classList.add("cocktail-card-back");
     }
 };
 
@@ -223,8 +223,8 @@ let pairValidate = () => {
         console.log("Congrats you've made a match");
         cardClicked1.style.opacity = "0.4";
         cardClicked2.style.opacity = "0.4";
-        cardClicked1.classList.remove("card-img");
-        cardClicked2.classList.remove("card-img");
+        cardClicked1.classList.remove("cocktail-card-back");
+        cardClicked2.classList.remove("cocktail-card-back");
         clickEvent1Result = null;
         clickEvent2Result = null;
         cardClicked1 = null;
