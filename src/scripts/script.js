@@ -55,6 +55,7 @@ let cardClicked2 = null;
 let clickEvent1Result = null;
 let clickEvent2Result = null;
 
+// GENERAL WEBSITE LOGIC START
 let allModalHide = () => {
     howtoModal.style.display = "none";
     gameEndedModal.style.display = "none";
@@ -65,30 +66,25 @@ let gameReset = () => {
         cards[i].src = cardBackImgSrc;
         cards[i].style.opacity = "1";
         cards[i].classList.add("cocktail-card-back");
+        shuffled = shuffleCardContents(cardContentArray);
+        clickEventsReset();
     }
 };
 
-//Changing nav links to bold when on the page
-let navLinkStatus = () => {
-    console.log("navLinkStatus working");
-    gameNavLink.classList.toggle("active");
-    learnNavLink.classList.toggle("active");
-}
-
 let pagesLoad = (e) => {
-    console.log(e);
     if (e.target.hash === "#learn-page") {
-        console.log(e);
-        console.log("learn Page active");
         learnPage.style.display = "block";
         gamePage.style.display = "none";
-        navLinkStatus();
+        //Changing nav links to bold when on the page
+        gameNavLink.classList.remove("active");
+        learnNavLink.classList.add("active");
         allModalHide();
     } else {
-        console.log("game Page Active")
         gamePage.style.display = "block";
         learnPage.style.display = "none";
-        navLinkStatus();
+        //Changing nav links to bold when on the page
+        gameNavLink.classList.add("active");
+        learnNavLink.classList.remove("active");
         allModalHide();
         gameReset();
     };
@@ -113,7 +109,9 @@ let howtoModalHide = (e) => {
 howtoModalShow();
 howtoButton.onclick = howtoModalShow;
 howtoButtonClose.onclick = howtoModalHide;
+//GENERAL WEBSITE LOGIC END
 
+// GAME LOGIC START
 //Card contents object defined
 function cardContent(cardImg, id) {
     this.cardImg = cardImg;
@@ -136,7 +134,7 @@ let shuffled = shuffleCardContents(cardContentArray);
 // Get id of card clicked and match to index from cards array. 
 let storeCardClicks = (e) => {
     //store both cards clicked (by element).
-    if (e.target.className !== "cocktail-card-back card-img") {
+    if (e.target.className !== "card-img cocktail-card-back") {
         return;
     } else if (cardClicked1 === null) {
         //store first clicked element and assign content.
@@ -188,34 +186,34 @@ let cardFlip = (index, e) => {
     };
 };
 
+let clickEventsReset = () => {
+    clickEvent1Result = null;
+    clickEvent2Result = null;
+    cardClicked1 = null;
+    cardClicked2 = null;
+};
+
 let pairValidate = () => {
     if (clickEvent2Result !== null && clickEvent1Result.id === clickEvent2Result.id) {
         cardClicked1.style.opacity = "0.4";
         cardClicked2.style.opacity = "0.4";
         cardClicked1.classList.remove("cocktail-card-back");
         cardClicked2.classList.remove("cocktail-card-back");
-        clickEvent1Result = null;
-        clickEvent2Result = null;
-        cardClicked1 = null;
-        cardClicked2 = null;
+        clickEventsReset();
         gameEnd();
     } else if (clickEvent2Result !== null && clickEvent1Result.id !== clickEvent2Result.id) {
         //show card back again
         cardClicked1.src = cardBackImgSrc;
         cardClicked2.src = cardBackImgSrc;
-        clickEvent1Result = null;
-        clickEvent2Result = null;
-        cardClicked1 = null;
-        cardClicked2 = null;
+       clickEventsReset();
     };
 };
 
 let gameEnd = () => {
-    console.log("Game end function running");
     const allGameCards = document.getElementsByClassName("cocktail-card-back");
     let gameEnded = true;
     for (let i = 0; i < allGameCards.length; i++) {
-        if (allGameCards[i].className === "cocktail-card-back card-img") {
+        if (allGameCards[i].className === "card-img cocktail-card-back") {
             gameEnded = false;
             break;
         };
@@ -229,5 +227,7 @@ let gameEnd = () => {
 for (let i = 0; i < cards.length; i++) {
     cards[i].onclick = storeCardClicks;
 
-}; 
+};
+
+// GAME LOGIC END
 
