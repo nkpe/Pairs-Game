@@ -104,6 +104,7 @@ header span {
 /* Learn Page */
 #learn-page {
     display: none;
+    margin-bottom: 30px;
 }
 
 .container-fluid {
