@@ -55,6 +55,7 @@ let cardClicked2 = null;
 let clickEvent1Result = null;
 let clickEvent2Result = null;
 
+// GENERAL WEBSITE LOGIC START
 let allModalHide = () => {
     howtoModal.style.display = "none";
     gameEndedModal.style.display = "none";
@@ -68,13 +69,6 @@ let gameReset = () => {
     }
 };
 
-//Changing nav links to bold when on the page
-let navLinkStatus = () => {
-    console.log("navLinkStatus working");
-    gameNavLink.classList.toggle("active");
-    learnNavLink.classList.toggle("active");
-}
-
 let pagesLoad = (e) => {
     console.log(e);
     if (e.target.hash === "#learn-page") {
@@ -82,13 +76,17 @@ let pagesLoad = (e) => {
         console.log("learn Page active");
         learnPage.style.display = "block";
         gamePage.style.display = "none";
-        navLinkStatus();
+        //Changing nav links to bold when on the page
+        gameNavLink.classList.remove("active");
+        learnNavLink.classList.add("active");
         allModalHide();
     } else {
         console.log("game Page Active")
         gamePage.style.display = "block";
         learnPage.style.display = "none";
-        navLinkStatus();
+        //Changing nav links to bold when on the page
+        gameNavLink.classList.add("active");
+        learnNavLink.classList.remove("active");
         allModalHide();
         gameReset();
     };
@@ -113,7 +111,9 @@ let howtoModalHide = (e) => {
 howtoModalShow();
 howtoButton.onclick = howtoModalShow;
 howtoButtonClose.onclick = howtoModalHide;
+//GENERAL WEBSITE LOGIC END
 
+// GAME LOGIC START
 //Card contents object defined
 function cardContent(cardImg, id) {
     this.cardImg = cardImg;
@@ -213,6 +213,7 @@ let pairValidate = () => {
 let gameEnd = () => {
     console.log("Game end function running");
     const allGameCards = document.getElementsByClassName("cocktail-card-back");
+    console.log("allGameCards");
     let gameEnded = true;
     for (let i = 0; i < allGameCards.length; i++) {
         if (allGameCards[i].className === "cocktail-card-back card-img") {
@@ -229,5 +230,7 @@ let gameEnd = () => {
 for (let i = 0; i < cards.length; i++) {
     cards[i].onclick = storeCardClicks;
 
-}; 
+};
+
+// GAME LOGIC END
 
